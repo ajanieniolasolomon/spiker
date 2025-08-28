@@ -4,14 +4,6 @@
   <!-- Title -->
   <h3 class="text-lg font-meduim text-[#667085]">Contextual Risk</h3>
 
-  <!-- Main Content Area -->
-<!--
-  MAIN CONTAINER
-  - Default (mobile): 'flex-col' to stack vertically, 'items-center' to center them,
-    and 'gap-y-6' to add space between the stacked items.
-  - Medium screens and up (md:): 'md:flex-row' for side-by-side layout and
-    'md:justify-between' to push them to the edges.
--->
 <div class="flex flex-row justify-between items-center gap-y-6 md:flex-row md:justify-between mt-4">
 
   <!-- Left Side: List of Risks (No changes needed inside this div) -->
@@ -26,11 +18,7 @@
     </div>
   </div>
 
-  <!--
-    Right Side: Donut Chart / Circle
-    - KEY CHANGE: Slightly smaller on mobile ('w-24 h-24') and larger on desktop ('md:w-28 md:h-28').
-    - KEY CHANGE: Text size is also adjusted responsively ('text-2xl md:text-3xl').
-  -->
+ 
   <div
     class="w-24 h-24 md:w-28 md:h-28 rounded-full border-8 flex items-center justify-center flex-shrink-0"
     [ngClass]="circleBorderClass">
