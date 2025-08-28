@@ -1,0 +1,14 @@
+import type { StorybookConfig } from '@storybook/angular';
+
+const config: StorybookConfig = {
+  "stories": [
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+  ],
+  "addons": ["@storybook/addon-styling-webpack"],
+  "framework": {
+    "name": "@storybook/angular",
+    "options": {}
+  },
+  staticDirs: ['../public'],
+};
+export default config;

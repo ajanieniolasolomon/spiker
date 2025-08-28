@@ -1,0 +1,44 @@
+<!-- Main container using flexbox for stable layout -->
+<div
+  class="inline-flex flex-col items-center"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()">
+
+  <!-- The positioning anchor for the popup -->
+  <div class="relative">
+    <img [src]="imageUrl" alt="Hoverable content" class="w-12 h-12 object-cover cursor-pointer">
+
+    <!--
+      The popup container.
+      - KEY CHANGE: The horizontal positioning classes are now fully dynamic.
+    -->
+    <div
+      class="absolute z-10 w-max max-w-lg transition-all duration-200 ease-in-out"
+      [ngClass]="{
+        'opacity-100 scale-100': isHovering,
+        'opacity-0 scale-95 pointer-events-none': !isHovering,
+
+    
+        'bottom-full mb-2': position === 'top-center',
+        'top-full mt-2': position === 'bottom-center' || position === 'left-bottom' || position === 'right-bottom',
+
+       
+        'left-1/2 -translate-x-1/2': position === 'top-center' || position === 'bottom-center',
+        'left-0': position === 'left-bottom',
+        'right-0': position === 'right-bottom'
+      }">
+
+      <!-- Wrapper div to ensure centering of dynamic content -->
+      <div class="flex justify-center items-center">
+        <ng-container #dynamicComponentContainer></ng-container>
+      </div>
+    </div>
+  </div>
+
+  <!-- Title and Subtitle centered below the image -->
+  <div class="mt-2 text-center w-24">
+    <h3 class="text-center mt-2 text-sm font-semibold text-[#525D73]">{{title}}</h3>
+    <h3 *ngIf="subtitle" class="text-center mt-0 text-[#667085] text-[10px]">{{subtitle}}</h3>
+  </div>
+
+</div>
