@@ -28,7 +28,7 @@ export default {
   render: (args) => ({
     props: args,
     template: `
-      <div class="flex h-screen font-sans">
+      <div class="flex h-screen ">
         <app-sidenav
           [activeItemId]="activeItemId"
           [userName]="userName"
