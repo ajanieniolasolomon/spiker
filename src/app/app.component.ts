@@ -32,8 +32,8 @@ export class AppComponent {
   isExpanded: boolean = true;
   sideNav= {
     activeItemId: 'discover',
-    userName: 'Jane Doe',
-    userRole: 'Administrator',
+    userName: 'Lorem',
+    userRole: 'Lorem',
     isExpanded: true,
   }
   textOne={
@@ -117,8 +117,8 @@ redOne={
 
     GH= {
     assetItems: [
-      { title: 'Production', subtitle: '10.0.1.5', riskLevel: 'Critical' },
-      { title: 'Staging-API', subtitle: '10.0.2.10', riskLevel: 'High' },
+      { title: 'Loremipsumdolorsit', subtitle: '10.0.1.5', riskLevel: 'Critical' },
+      { title: 'Loremipsumdolorsit', subtitle: '10.0.2.10', riskLevel: 'High' },
     
     ] as AssetItem[],
     currentPageStart: 11,
