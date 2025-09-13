@@ -4,26 +4,25 @@
   <!-- Title -->
   <h3 class="text-lg font-meduim text-[#667085]">Contextual Risk</h3>
 
-<div class="flex flex-row justify-between items-center gap-y-6 md:flex-row md:justify-between mt-4">
+  <div class="flex flex-row justify-between items-center gap-y-6 md:flex-row md:justify-between mt-4">
 
-  <!-- Left Side: List of Risks (No changes needed inside this div) -->
-  <div class="space-y-3">
+    <!-- Left Side: List of Risks (No changes needed inside this div) -->
+    <div class="space-y-3">
       <div *ngFor="let risk of riskList" class="flex items-center space-x-3">
-      <!-- Colored Dot -->
-      <span class="w-2.5 h-2.5 rounded-full" [ngClass]="risk.colorClass"></span>
-      <!-- Count -->
-      <span class="font-bold text-[#383874] w-4 text-right">{{ risk.count }}</span>
-      <!-- Name -->
-      <span class="text-[#383874] text-base">{{ risk.name }}</span>
+        <!-- Colored Dot -->
+        <span class="w-2.5 h-2.5 rounded-full" [ngClass]="risk.colorClass"></span>
+        <!-- Count -->
+        <span class="font-bold text-[#383874] w-4 text-right">{{ risk.count }}</span>
+        <!-- Name -->
+        <span class="text-[#383874] text-base">{{ risk.name }}</span>
+      </div>
     </div>
-  </div>
 
- 
-  <div
-    class="w-24 h-24 md:w-28 md:h-28 rounded-full border-8 flex items-center justify-center flex-shrink-0"
-    [ngClass]="circleBorderClass">
-    <span class="text-2xl md:text-3xl font-bold text-gray-700">{{ totalCount }}</span>
-  </div>
 
-</div>
+    <div class="w-24 h-24 md:w-28 md:h-28 rounded-full border-8 flex items-center justify-center flex-shrink-0"
+      [ngClass]="circleBorderClass">
+      <span class="text-2xl md:text-3xl font-bold text-gray-700">{{ totalCount }}</span>
+    </div>
+
+  </div>
 </div>
