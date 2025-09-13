@@ -4,9 +4,9 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-vulnerabilities-card',
   templateUrl: './vulnerabilities-card.component.html',
-  styleUrl: './vulnerabilities-card.component.scss',
+    standalone: true,
   imports: [CommonModule],
-  standalone: true,
+
 })
 export class VulnerabilitiesCardComponent {
   /**

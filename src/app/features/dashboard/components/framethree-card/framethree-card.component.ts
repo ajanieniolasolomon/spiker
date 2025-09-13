@@ -21,7 +21,6 @@ export interface ContentBlock {
   selector: 'app-framethree-card',
   imports: [CommonModule],
   templateUrl: './framethree-card.component.html',
-  styleUrl: './framethree-card.component.scss',
 })
 export class FramethreeCardComponent {
   /**

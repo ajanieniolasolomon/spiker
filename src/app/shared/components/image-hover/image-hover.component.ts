@@ -4,8 +4,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-image-hover',
   imports: [CommonModule],
-  templateUrl: './image-hover.component.html',
-  styleUrl: './image-hover.component.scss',
+  templateUrl: './image-hover.component.html'
 })
 export class ImageHoverComponent implements OnDestroy {
   /**

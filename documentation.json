@@ -96,12 +96,12 @@
         },
         {
             "name": "ContentBlock",
-            "id": "interface-ContentBlock-c3191fcb64bc81b94e1f557c2ec4e8d9b9ad0047fad85225ea1960d8be04ed32c379df02b1116887c7386682ef537dd83cadb7c85d8113f0ad0e01fdfb2f6c07",
+            "id": "interface-ContentBlock-a267b6124d142a1d52aecbc54ebe30b6cad07aa5d4f1cc68309a19c363523a947e60d08c4b3e17abb00e8a161ce2f1aa1cf904d4b55f607d9053be8fae118a7f",
             "file": "src/app/features/dashboard/components/framethree-card/framethree-card.component.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n// Define the types for items that can appear in a line\nexport type LineItemType = 'text' | 'yellow-tag' | 'green-tag' | 'purple-tag' | 'blue-tag';\n\nexport interface LineItem {\n  type: LineItemType;\n  value: string;\n  // Optional secondary value for tags like \"Lorem\" \"Ipsum\"\n  secondaryValue?: string;\n}\n\n// Define the structure for a single content block\nexport interface ContentBlock {\n  infoLineItems: LineItem[];\n  dataLineItems: LineItem[];\n}\n\n@Component({\n  selector: 'app-framethree-card',\n  imports: [CommonModule],\n  templateUrl: './framethree-card.component.html',\n  styleUrl: './framethree-card.component.scss',\n})\nexport class FramethreeCardComponent {\n  /**\n   * The main title next to the server icon.\n   */\n  @Input() title: string = 'Loremipsum';\n\n  /**\n   * An array of content blocks to be rendered.\n   * Each block contains an info line and a data line.\n   */\n  @Input() contentBlocks: ContentBlock[] = [\n    // Default data to match the first block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'green-tag', value: 'Lorem' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'blue-tag', value: 'Lorem', secondaryValue: '1234,5678' },\n      ],\n    },\n    // Default data to match the second block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n      ],\n    },\n  ];\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n// Define the types for items that can appear in a line\nexport type LineItemType = 'text' | 'yellow-tag' | 'green-tag' | 'purple-tag' | 'blue-tag';\n\nexport interface LineItem {\n  type: LineItemType;\n  value: string;\n  // Optional secondary value for tags like \"Lorem\" \"Ipsum\"\n  secondaryValue?: string;\n}\n\n// Define the structure for a single content block\nexport interface ContentBlock {\n  infoLineItems: LineItem[];\n  dataLineItems: LineItem[];\n}\n\n@Component({\n  selector: 'app-framethree-card',\n  imports: [CommonModule],\n  templateUrl: './framethree-card.component.html',\n})\nexport class FramethreeCardComponent {\n  /**\n   * The main title next to the server icon.\n   */\n  @Input() title: string = 'Loremipsum';\n\n  /**\n   * An array of content blocks to be rendered.\n   * Each block contains an info line and a data line.\n   */\n  @Input() contentBlocks: ContentBlock[] = [\n    // Default data to match the first block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'green-tag', value: 'Lorem' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'blue-tag', value: 'Lorem', secondaryValue: '1234,5678' },\n      ],\n    },\n    // Default data to match the second block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n      ],\n    },\n  ];\n}\n",
             "properties": [
                 {
                     "name": "dataLineItems",
@@ -366,12 +366,12 @@
         },
         {
             "name": "DataLineItem",
-            "id": "interface-DataLineItem-662abb9cef0f5f2f06c6f47cf3b75b819247004b169b93fbec253f60be1378d20bf483b877d8960ee40df905f27f152ceb74a65946bb730e92ca2a7e603cc48c",
+            "id": "interface-DataLineItem-3662889b20e660f5c6a3bb28cd65c64cf96adf42c93680574ae9d14ffa2e118550d878cbb3f9c885c3ff7948eabe3597bd6f468fa6a23c202dad87a808848892",
             "file": "src/app/features/dashboard/components/frametwo-card/frametwo-card.component.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\nimport { CommonModule } from '@angular/common';\n\n/**\n * Defines the structure for an item in the data line,\n * which can be either plain text or a styled tag.\n */\nexport interface DataLineItem {\n  type: 'text' | 'tag';\n  value: string;\n}\n\n@Component({\n  selector: 'app-frametwo-card',\n  imports: [CommonModule],\n  templateUrl: './frametwo-card.component.html',\n  styleUrl: './frametwo-card.component.scss',\n})\nexport class FrametwoCardComponent {\n  /**\n   * The main title next to the server icon.\n   */\n  @Input() title: string = 'Loremipsu';\n\n  /**\n   * The label for the middle info line (e.g., \"Lorem:\").\n   */\n  @Input() infoLineLabel: string = 'Lorem:';\n\n  /**\n   * The plain text part of the info line.\n   */\n  @Input() infoLineText: string = 'Loremipsum Loremipsum';\n\n  /**\n   * The version number in the tag on the info line.\n   */\n  @Input() infoLineVersion: string = '1.2.3.4';\n\n  /**\n   * An array of items to display in the bottom row.\n   * Each item specifies its type ('text' or 'tag') and its value.\n   */\n  @Input() dataLineItems: DataLineItem[] = [\n    { type: 'tag', value: '1.2.3.4' },\n    { type: 'text', value: 'Loremipsum' },\n    { type: 'tag', value: '1.2.3.4' },\n    { type: 'tag', value: '1.2.3.4' },\n  ];\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\nimport { CommonModule } from '@angular/common';\n\n/**\n * Defines the structure for an item in the data line,\n * which can be either plain text or a styled tag.\n */\nexport interface DataLineItem {\n  type: 'text' | 'tag';\n  value: string;\n}\n\n@Component({\n  selector: 'app-frametwo-card',\n  imports: [CommonModule],\n  templateUrl: './frametwo-card.component.html',\n})\nexport class FrametwoCardComponent {\n  /**\n   * The main title next to the server icon.\n   */\n  @Input() title: string = 'Loremipsu';\n\n  /**\n   * The label for the middle info line (e.g., \"Lorem:\").\n   */\n  @Input() infoLineLabel: string = 'Lorem:';\n\n  /**\n   * The plain text part of the info line.\n   */\n  @Input() infoLineText: string = 'Loremipsum Loremipsum';\n\n  /**\n   * The version number in the tag on the info line.\n   */\n  @Input() infoLineVersion: string = '1.2.3.4';\n\n  /**\n   * An array of items to display in the bottom row.\n   * Each item specifies its type ('text' or 'tag') and its value.\n   */\n  @Input() dataLineItems: DataLineItem[] = [\n    { type: 'tag', value: '1.2.3.4' },\n    { type: 'text', value: 'Loremipsum' },\n    { type: 'tag', value: '1.2.3.4' },\n    { type: 'tag', value: '1.2.3.4' },\n  ];\n}\n",
             "properties": [
                 {
                     "name": "type",
@@ -468,12 +468,12 @@
         },
         {
             "name": "LineItem",
-            "id": "interface-LineItem-c3191fcb64bc81b94e1f557c2ec4e8d9b9ad0047fad85225ea1960d8be04ed32c379df02b1116887c7386682ef537dd83cadb7c85d8113f0ad0e01fdfb2f6c07",
+            "id": "interface-LineItem-a267b6124d142a1d52aecbc54ebe30b6cad07aa5d4f1cc68309a19c363523a947e60d08c4b3e17abb00e8a161ce2f1aa1cf904d4b55f607d9053be8fae118a7f",
             "file": "src/app/features/dashboard/components/framethree-card/framethree-card.component.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n// Define the types for items that can appear in a line\nexport type LineItemType = 'text' | 'yellow-tag' | 'green-tag' | 'purple-tag' | 'blue-tag';\n\nexport interface LineItem {\n  type: LineItemType;\n  value: string;\n  // Optional secondary value for tags like \"Lorem\" \"Ipsum\"\n  secondaryValue?: string;\n}\n\n// Define the structure for a single content block\nexport interface ContentBlock {\n  infoLineItems: LineItem[];\n  dataLineItems: LineItem[];\n}\n\n@Component({\n  selector: 'app-framethree-card',\n  imports: [CommonModule],\n  templateUrl: './framethree-card.component.html',\n  styleUrl: './framethree-card.component.scss',\n})\nexport class FramethreeCardComponent {\n  /**\n   * The main title next to the server icon.\n   */\n  @Input() title: string = 'Loremipsum';\n\n  /**\n   * An array of content blocks to be rendered.\n   * Each block contains an info line and a data line.\n   */\n  @Input() contentBlocks: ContentBlock[] = [\n    // Default data to match the first block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'green-tag', value: 'Lorem' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'blue-tag', value: 'Lorem', secondaryValue: '1234,5678' },\n      ],\n    },\n    // Default data to match the second block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n      ],\n    },\n  ];\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n// Define the types for items that can appear in a line\nexport type LineItemType = 'text' | 'yellow-tag' | 'green-tag' | 'purple-tag' | 'blue-tag';\n\nexport interface LineItem {\n  type: LineItemType;\n  value: string;\n  // Optional secondary value for tags like \"Lorem\" \"Ipsum\"\n  secondaryValue?: string;\n}\n\n// Define the structure for a single content block\nexport interface ContentBlock {\n  infoLineItems: LineItem[];\n  dataLineItems: LineItem[];\n}\n\n@Component({\n  selector: 'app-framethree-card',\n  imports: [CommonModule],\n  templateUrl: './framethree-card.component.html',\n})\nexport class FramethreeCardComponent {\n  /**\n   * The main title next to the server icon.\n   */\n  @Input() title: string = 'Loremipsum';\n\n  /**\n   * An array of content blocks to be rendered.\n   * Each block contains an info line and a data line.\n   */\n  @Input() contentBlocks: ContentBlock[] = [\n    // Default data to match the first block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'green-tag', value: 'Lorem' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'blue-tag', value: 'Lorem', secondaryValue: '1234,5678' },\n      ],\n    },\n    // Default data to match the second block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n      ],\n    },\n  ];\n}\n",
             "properties": [
                 {
                     "name": "secondaryValue",
@@ -606,12 +606,12 @@
         },
         {
             "name": "NavigationState",
-            "id": "interface-NavigationState-bdf08b1dfc3627751c835295549ed0ebd41490524b9fefe09e9bf4208d069c889c427f61f9bf4a65ef21daa987c1e7d3b272d71d3df87fef06c536f8da493f1c",
+            "id": "interface-NavigationState-c25a9216eceda254e1b2a5f2dfc7e89556c6cd1bbf8e3c5c73ec087ad767d8aeb04ee46c74f4a2199d038ceb1ce3494d607b0f654cc4587416209a2828627025",
             "file": "src/app/core/services/navigation.service.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Injectable, signal } from '@angular/core';\n\nexport interface NavigationState {\n  activeItemId: string;\n  userName: string;\n  userRole: string;\n  isSidenavExpanded: boolean;\n}\n\n@Injectable({\n  providedIn: 'root',\n})\nexport class NavigationService {\n  private readonly _navigationState = signal<NavigationState>({\n    activeItemId: 'discover',\n    userName: 'Lorem',\n    userRole: 'Lorem',\n    isSidenavExpanded: false,\n  });\n\n  public readonly navigationState = this._navigationState.asReadonly();\n\n  public toggleSidenav(): void {\n    this._navigationState.update(state => ({\n      ...state,\n      isSidenavExpanded: !state.isSidenavExpanded,\n    }));\n  }\n\n  public setActiveItem(itemId: string): void {\n    this._navigationState.update(state => ({\n      ...state,\n      activeItemId: itemId,\n    }));\n  }\n\n  public updateUserInfo(userName: string, userRole: string): void {\n    this._navigationState.update(state => ({\n      ...state,\n      userName,\n      userRole,\n    }));\n  }\n\n  public handleNavItemClick(itemId: string): void {\n    this.setActiveItem(itemId);\n    console.log('Navigation item clicked:', itemId);\n  }\n\n  public handleLogout(): void {\n    console.log('User logout requested');\n    // Implement logout logic here\n  }\n}\n",
+            "sourceCode": "import { Injectable, signal, inject } from '@angular/core';\nimport { Router } from '@angular/router';\n\nexport interface NavigationState {\n  activeItemId: string;\n  userName: string;\n  userRole: string;\n  isSidenavExpanded: boolean;\n}\n\n@Injectable({\n  providedIn: 'root',\n})\nexport class NavigationService {\n  private readonly _router = inject(Router);\n\n  private readonly _navigationState = signal<NavigationState>({\n    activeItemId: 'dashboard',\n    userName: 'Lorem',\n    userRole: 'Lorem',\n    isSidenavExpanded: false,\n  });\n\n  public readonly navigationState = this._navigationState.asReadonly();\n\n  public toggleSidenav(): void {\n    this._navigationState.update(state => ({\n      ...state,\n      isSidenavExpanded: !state.isSidenavExpanded,\n    }));\n  }\n\n  public setActiveItem(itemId: string): void {\n    this._navigationState.update(state => ({\n      ...state,\n      activeItemId: itemId,\n    }));\n  }\n\n  public updateUserInfo(userName: string, userRole: string): void {\n    this._navigationState.update(state => ({\n      ...state,\n      userName,\n      userRole,\n    }));\n  }\n\n  public handleNavItemClick(itemId: string): void {\n    this.setActiveItem(itemId);\n\n    // Navigate to the appropriate route based on the item clicked\n    switch (itemId) {\n      case 'dashboard':\n        this._router.navigate(['/dashboard']);\n        break;\n      case 'discover':\n        this._router.navigate(['/dashboard']); // For now, all routes go to dashboard\n        break;\n      default:\n        console.log('Navigation item clicked:', itemId);\n      // Add more routes as needed\n    }\n  }\n\n  public handleLogout(): void {\n    console.log('User logout requested');\n    // Implement logout logic here\n  }\n}\n",
             "properties": [
                 {
                     "name": "activeItemId",
@@ -621,7 +621,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 4
+                    "line": 5
                 },
                 {
                     "name": "isSidenavExpanded",
@@ -631,7 +631,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 7
+                    "line": 8
                 },
                 {
                     "name": "userName",
@@ -641,7 +641,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 5
+                    "line": 6
                 },
                 {
                     "name": "userRole",
@@ -651,7 +651,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 6
+                    "line": 7
                 }
             ],
             "indexSignatures": [],
@@ -975,19 +975,34 @@
         },
         {
             "name": "NavigationService",
-            "id": "injectable-NavigationService-bdf08b1dfc3627751c835295549ed0ebd41490524b9fefe09e9bf4208d069c889c427f61f9bf4a65ef21daa987c1e7d3b272d71d3df87fef06c536f8da493f1c",
+            "id": "injectable-NavigationService-c25a9216eceda254e1b2a5f2dfc7e89556c6cd1bbf8e3c5c73ec087ad767d8aeb04ee46c74f4a2199d038ceb1ce3494d607b0f654cc4587416209a2828627025",
             "file": "src/app/core/services/navigation.service.ts",
             "properties": [
                 {
                     "name": "_navigationState",
-                    "defaultValue": "signal<NavigationState>({\n    activeItemId: 'discover',\n    userName: 'Lorem',\n    userRole: 'Lorem',\n    isSidenavExpanded: false,\n  })",
+                    "defaultValue": "signal<NavigationState>({\n    activeItemId: 'dashboard',\n    userName: 'Lorem',\n    userRole: 'Lorem',\n    isSidenavExpanded: false,\n  })",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 14,
+                    "line": 17,
+                    "modifierKind": [
+                        123,
+                        148
+                    ]
+                },
+                {
+                    "name": "_router",
+                    "defaultValue": "inject(Router)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 15,
                     "modifierKind": [
                         123,
                         148
@@ -1002,7 +1017,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 21,
+                    "line": 24,
                     "modifierKind": [
                         125,
                         148
@@ -1016,7 +1031,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 50,
+                    "line": 65,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -1036,7 +1051,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 45,
+                    "line": 48,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -1067,7 +1082,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 30,
+                    "line": 33,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -1091,7 +1106,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 23,
+                    "line": 26,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -1117,7 +1132,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 37,
+                    "line": 40,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -1149,7 +1164,7 @@
             "deprecationMessage": "",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { Injectable, signal } from '@angular/core';\n\nexport interface NavigationState {\n  activeItemId: string;\n  userName: string;\n  userRole: string;\n  isSidenavExpanded: boolean;\n}\n\n@Injectable({\n  providedIn: 'root',\n})\nexport class NavigationService {\n  private readonly _navigationState = signal<NavigationState>({\n    activeItemId: 'discover',\n    userName: 'Lorem',\n    userRole: 'Lorem',\n    isSidenavExpanded: false,\n  });\n\n  public readonly navigationState = this._navigationState.asReadonly();\n\n  public toggleSidenav(): void {\n    this._navigationState.update(state => ({\n      ...state,\n      isSidenavExpanded: !state.isSidenavExpanded,\n    }));\n  }\n\n  public setActiveItem(itemId: string): void {\n    this._navigationState.update(state => ({\n      ...state,\n      activeItemId: itemId,\n    }));\n  }\n\n  public updateUserInfo(userName: string, userRole: string): void {\n    this._navigationState.update(state => ({\n      ...state,\n      userName,\n      userRole,\n    }));\n  }\n\n  public handleNavItemClick(itemId: string): void {\n    this.setActiveItem(itemId);\n    console.log('Navigation item clicked:', itemId);\n  }\n\n  public handleLogout(): void {\n    console.log('User logout requested');\n    // Implement logout logic here\n  }\n}\n",
+            "sourceCode": "import { Injectable, signal, inject } from '@angular/core';\nimport { Router } from '@angular/router';\n\nexport interface NavigationState {\n  activeItemId: string;\n  userName: string;\n  userRole: string;\n  isSidenavExpanded: boolean;\n}\n\n@Injectable({\n  providedIn: 'root',\n})\nexport class NavigationService {\n  private readonly _router = inject(Router);\n\n  private readonly _navigationState = signal<NavigationState>({\n    activeItemId: 'dashboard',\n    userName: 'Lorem',\n    userRole: 'Lorem',\n    isSidenavExpanded: false,\n  });\n\n  public readonly navigationState = this._navigationState.asReadonly();\n\n  public toggleSidenav(): void {\n    this._navigationState.update(state => ({\n      ...state,\n      isSidenavExpanded: !state.isSidenavExpanded,\n    }));\n  }\n\n  public setActiveItem(itemId: string): void {\n    this._navigationState.update(state => ({\n      ...state,\n      activeItemId: itemId,\n    }));\n  }\n\n  public updateUserInfo(userName: string, userRole: string): void {\n    this._navigationState.update(state => ({\n      ...state,\n      userName,\n      userRole,\n    }));\n  }\n\n  public handleNavItemClick(itemId: string): void {\n    this.setActiveItem(itemId);\n\n    // Navigate to the appropriate route based on the item clicked\n    switch (itemId) {\n      case 'dashboard':\n        this._router.navigate(['/dashboard']);\n        break;\n      case 'discover':\n        this._router.navigate(['/dashboard']); // For now, all routes go to dashboard\n        break;\n      default:\n        console.log('Navigation item clicked:', itemId);\n      // Add more routes as needed\n    }\n  }\n\n  public handleLogout(): void {\n    console.log('User logout requested');\n    // Implement logout logic here\n  }\n}\n",
             "extends": [],
             "type": "injectable"
         },
@@ -1353,7 +1368,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-b82c9af8b766a423a1d6677eaa33c0d1c688913262f919d27ab1eeaa2556bae983eff71126b3fcbca41b984d0e4768e7ce9d0cc318c020ee1a966bc7974e6abb",
+            "id": "component-AppComponent-1a5aaeee5ac0858fde230d3200efab24edb82dc0acb802777579268c3a00cfc876952860cbce1000b8d843a366f9b683289e7118f17a340ed44bc87381490df3",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1472,24 +1487,23 @@
                     "type": "module"
                 },
                 {
-                    "name": "SidenavComponent",
-                    "type": "component"
+                    "name": "RouterOutlet"
                 },
                 {
-                    "name": "DashboardComponent",
+                    "name": "SidenavComponent",
                     "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, inject } from '@angular/core';\nimport { SidenavComponent } from './layout/components/sidenav/sidenav.component';\nimport { NavigationService } from './core/services/navigation.service';\nimport { DashboardComponent } from './features/dashboard/components/dashboard/dashboard.component';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [CommonModule, SidenavComponent, DashboardComponent],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.scss',\n})\nexport class AppComponent {\n  private readonly _navigationService = inject(NavigationService);\n\n  public readonly navigationState = this._navigationService.navigationState;\n\n  public onToggleSidenav(): void {\n    this._navigationService.toggleSidenav();\n  }\n\n  public onNavItemClicked(itemId: string): void {\n    this._navigationService.handleNavItemClick(itemId);\n  }\n\n  public onLogoutClicked(): void {\n    this._navigationService.handleLogout();\n  }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, inject } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\nimport { SidenavComponent } from './layout/components/sidenav/sidenav.component';\nimport { NavigationService } from './core/services/navigation.service';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [CommonModule, RouterOutlet, SidenavComponent],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.scss',\n})\nexport class AppComponent {\n  private readonly _navigationService = inject(NavigationService);\n\n  public readonly navigationState = this._navigationService.navigationState;\n\n  public onToggleSidenav(): void {\n    this._navigationService.toggleSidenav();\n  }\n\n  public onNavItemClicked(itemId: string): void {\n    this._navigationService.handleNavItemClick(itemId);\n  }\n\n  public onLogoutClicked(): void {\n    this._navigationService.handleLogout();\n  }\n}\n",
             "styleUrl": "./app.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"flex h-screen overflow-hidden bg-gray-50\">\n  <!-- Mobile Menu Toggle -->\n  <button\n    (click)=\"onToggleSidenav()\"\n    class=\"fixed top-0 left-0 z-50 text-gray-600 hover:text-gray-900 lg:hidden cursor-pointer\"\n    aria-label=\"Toggle navigation menu\"\n  >\n    <svg\n      class=\"w-6 h-6\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      fill=\"none\"\n      viewBox=\"0 0 24 24\"\n      stroke-width=\"1.5\"\n      stroke=\"currentColor\"\n    >\n      <path\n        stroke-linecap=\"round\"\n        stroke-linejoin=\"round\"\n        d=\"M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5\"\n      />\n    </svg>\n  </button>\n\n  <!-- Sidenav -->\n  <div class=\"flex-shrink-0\">\n    <app-sidenav\n      [isExpanded]=\"navigationState().isSidenavExpanded\"\n      [activeItemId]=\"navigationState().activeItemId\"\n      [userName]=\"navigationState().userName\"\n      [userRole]=\"navigationState().userRole\"\n      (toggleClicked)=\"onToggleSidenav()\"\n      (navItemClicked)=\"onNavItemClicked($event)\"\n      (logoutClicked)=\"onLogoutClicked()\"\n    >\n    </app-sidenav>\n  </div>\n\n  <!-- Main Content -->\n  <main class=\"flex-1 min-w-0\">\n    <app-dashboard></app-dashboard>\n  </main>\n</div>\n"
+            "templateData": "<div class=\"flex h-screen overflow-hidden bg-gray-50\">\n  <!-- Mobile Menu Toggle -->\n  <button\n    (click)=\"onToggleSidenav()\"\n    class=\"fixed top-0 left-0 z-50 text-gray-600 hover:text-gray-900 lg:hidden cursor-pointer\"\n    aria-label=\"Toggle navigation menu\"\n  >\n    <svg\n      class=\"w-6 h-6\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      fill=\"none\"\n      viewBox=\"0 0 24 24\"\n      stroke-width=\"1.5\"\n      stroke=\"currentColor\"\n    >\n      <path\n        stroke-linecap=\"round\"\n        stroke-linejoin=\"round\"\n        d=\"M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5\"\n      />\n    </svg>\n  </button>\n\n  <!-- Sidenav -->\n  <div class=\"flex-shrink-0\">\n    <app-sidenav\n      [isExpanded]=\"navigationState().isSidenavExpanded\"\n      [activeItemId]=\"navigationState().activeItemId\"\n      [userName]=\"navigationState().userName\"\n      [userRole]=\"navigationState().userRole\"\n      (toggleClicked)=\"onToggleSidenav()\"\n      (navItemClicked)=\"onNavItemClicked($event)\"\n      (logoutClicked)=\"onLogoutClicked()\"\n    >\n    </app-sidenav>\n  </div>\n\n  <!-- Main Content -->\n  <main class=\"flex-1 min-w-0\">\n    <router-outlet></router-outlet>\n  </main>\n</div>\n"
         },
         {
             "name": "ContextAnalyticCardComponent",
@@ -1977,7 +1991,7 @@
         },
         {
             "name": "FrameoneCardComponent",
-            "id": "component-FrameoneCardComponent-3c8f959c091eb6328b80155bd29ca4ec34cde905739f4dfeee10c75b3a72174d73c3f200a960a6f31363cf760187fb56e6781cc37e8e31485b766b22bd6480d5",
+            "id": "component-FrameoneCardComponent-0b42618dc47373344be1e9392b05c46d9bd0d1c408a71e32583e84b9ededd82bdb3092c2d9554f6e982160426d8c7aac08a50fe3f5b9b84cafc5e0f9abca3115",
             "file": "src/app/features/dashboard/components/frameone-card/frameone-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1998,7 +2012,7 @@
                     "defaultValue": "'Loremipsum'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 26,
+                    "line": 25,
                     "type": "string",
                     "decorators": []
                 },
@@ -2007,7 +2021,7 @@
                     "defaultValue": "'Lorem'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 28,
+                    "line": 27,
                     "type": "string",
                     "decorators": []
                 },
@@ -2016,7 +2030,7 @@
                     "defaultValue": "'1234,5678'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 30,
+                    "line": 29,
                     "type": "string",
                     "decorators": []
                 },
@@ -2025,7 +2039,7 @@
                     "defaultValue": "true",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 18,
+                    "line": 17,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -2034,7 +2048,7 @@
                     "defaultValue": "'Lorem:'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 20,
+                    "line": 19,
                     "type": "string",
                     "decorators": []
                 },
@@ -2043,7 +2057,7 @@
                     "defaultValue": "'Lorem'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
+                    "line": 21,
                     "type": "string",
                     "decorators": []
                 },
@@ -2052,7 +2066,7 @@
                     "defaultValue": "'\"Ipsum\"'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 24,
+                    "line": 23,
                     "type": "string",
                     "decorators": []
                 },
@@ -2061,7 +2075,7 @@
                     "defaultValue": "'192.168.1.1'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 16,
+                    "line": 15,
                     "type": "string",
                     "decorators": []
                 },
@@ -2072,7 +2086,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe main title of the card.\n",
                     "description": "<p>The main title of the card.</p>\n",
-                    "line": 14,
+                    "line": 13,
                     "type": "string",
                     "decorators": []
                 }
@@ -2094,8 +2108,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule, NgOptimizedImage } from '@angular/common';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-frameone-card',\n  imports: [CommonModule],\n  templateUrl: './frameone-card.component.html',\n  styleUrl: './frameone-card.component.scss',\n})\nexport class FrameoneCardComponent {\n  /**\n   * The main title of the card.\n   */\n  @Input() title: string = 'Loremipsumdolorsit';\n\n  @Input() subtitle: string = '192.168.1.1';\n\n  @Input() hasWarning: boolean = true;\n\n  @Input() infoLabel: string = 'Lorem:';\n\n  @Input() infoTextPrimary: string = 'Lorem';\n\n  @Input() infoTextSecondary: string = '\"Ipsum\"';\n\n  @Input() dataLabel: string = 'Loremipsum';\n\n  @Input() dataValuePrimary: string = 'Lorem';\n\n  @Input() dataValueSecondary: string = '1234,5678';\n}\n",
-            "styleUrl": "./frameone-card.component.scss",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-frameone-card',\n  imports: [CommonModule],\n  templateUrl: './frameone-card.component.html'\n})\nexport class FrameoneCardComponent {\n  /**\n   * The main title of the card.\n   */\n  @Input() title: string = 'Loremipsumdolorsit';\n\n  @Input() subtitle: string = '192.168.1.1';\n\n  @Input() hasWarning: boolean = true;\n\n  @Input() infoLabel: string = 'Lorem:';\n\n  @Input() infoTextPrimary: string = 'Lorem';\n\n  @Input() infoTextSecondary: string = '\"Ipsum\"';\n\n  @Input() dataLabel: string = 'Loremipsum';\n\n  @Input() dataValuePrimary: string = 'Lorem';\n\n  @Input() dataValueSecondary: string = '1234,5678';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -2104,7 +2117,7 @@
         },
         {
             "name": "FramethreeCardComponent",
-            "id": "component-FramethreeCardComponent-c3191fcb64bc81b94e1f557c2ec4e8d9b9ad0047fad85225ea1960d8be04ed32c379df02b1116887c7386682ef537dd83cadb7c85d8113f0ad0e01fdfb2f6c07",
+            "id": "component-FramethreeCardComponent-a267b6124d142a1d52aecbc54ebe30b6cad07aa5d4f1cc68309a19c363523a947e60d08c4b3e17abb00e8a161ce2f1aa1cf904d4b55f607d9053be8fae118a7f",
             "file": "src/app/features/dashboard/components/framethree-card/framethree-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2127,7 +2140,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nAn array of content blocks to be rendered.\nEach block contains an info line and a data line.\n",
                     "description": "<p>An array of content blocks to be rendered.\nEach block contains an info line and a data line.</p>\n",
-                    "line": 36,
+                    "line": 35,
                     "type": "ContentBlock[]",
                     "decorators": []
                 },
@@ -2138,7 +2151,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe main title next to the server icon.\n",
                     "description": "<p>The main title next to the server icon.</p>\n",
-                    "line": 30,
+                    "line": 29,
                     "type": "string",
                     "decorators": []
                 }
@@ -2160,8 +2173,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n// Define the types for items that can appear in a line\nexport type LineItemType = 'text' | 'yellow-tag' | 'green-tag' | 'purple-tag' | 'blue-tag';\n\nexport interface LineItem {\n  type: LineItemType;\n  value: string;\n  // Optional secondary value for tags like \"Lorem\" \"Ipsum\"\n  secondaryValue?: string;\n}\n\n// Define the structure for a single content block\nexport interface ContentBlock {\n  infoLineItems: LineItem[];\n  dataLineItems: LineItem[];\n}\n\n@Component({\n  selector: 'app-framethree-card',\n  imports: [CommonModule],\n  templateUrl: './framethree-card.component.html',\n  styleUrl: './framethree-card.component.scss',\n})\nexport class FramethreeCardComponent {\n  /**\n   * The main title next to the server icon.\n   */\n  @Input() title: string = 'Loremipsum';\n\n  /**\n   * An array of content blocks to be rendered.\n   * Each block contains an info line and a data line.\n   */\n  @Input() contentBlocks: ContentBlock[] = [\n    // Default data to match the first block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'green-tag', value: 'Lorem' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'blue-tag', value: 'Lorem', secondaryValue: '1234,5678' },\n      ],\n    },\n    // Default data to match the second block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n      ],\n    },\n  ];\n}\n",
-            "styleUrl": "./framethree-card.component.scss",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n// Define the types for items that can appear in a line\nexport type LineItemType = 'text' | 'yellow-tag' | 'green-tag' | 'purple-tag' | 'blue-tag';\n\nexport interface LineItem {\n  type: LineItemType;\n  value: string;\n  // Optional secondary value for tags like \"Lorem\" \"Ipsum\"\n  secondaryValue?: string;\n}\n\n// Define the structure for a single content block\nexport interface ContentBlock {\n  infoLineItems: LineItem[];\n  dataLineItems: LineItem[];\n}\n\n@Component({\n  selector: 'app-framethree-card',\n  imports: [CommonModule],\n  templateUrl: './framethree-card.component.html',\n})\nexport class FramethreeCardComponent {\n  /**\n   * The main title next to the server icon.\n   */\n  @Input() title: string = 'Loremipsum';\n\n  /**\n   * An array of content blocks to be rendered.\n   * Each block contains an info line and a data line.\n   */\n  @Input() contentBlocks: ContentBlock[] = [\n    // Default data to match the first block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'green-tag', value: 'Lorem' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'blue-tag', value: 'Lorem', secondaryValue: '1234,5678' },\n      ],\n    },\n    // Default data to match the second block in the image\n    {\n      infoLineItems: [\n        { type: 'yellow-tag', value: 'Lorem', secondaryValue: '\"Ipsum\"' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n      ],\n      dataLineItems: [\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'text', value: 'Loremipsum Loremipsum' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n        { type: 'purple-tag', value: '1.2.3.4' },\n      ],\n    },\n  ];\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -2170,7 +2182,7 @@
         },
         {
             "name": "FrametwoCardComponent",
-            "id": "component-FrametwoCardComponent-662abb9cef0f5f2f06c6f47cf3b75b819247004b169b93fbec253f60be1378d20bf483b877d8960ee40df905f27f152ceb74a65946bb730e92ca2a7e603cc48c",
+            "id": "component-FrametwoCardComponent-3662889b20e660f5c6a3bb28cd65c64cf96adf42c93680574ae9d14ffa2e118550d878cbb3f9c885c3ff7948eabe3597bd6f468fa6a23c202dad87a808848892",
             "file": "src/app/features/dashboard/components/frametwo-card/frametwo-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2193,7 +2205,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nAn array of items to display in the bottom row.\nEach item specifies its type ('text' or 'tag') and its value.\n",
                     "description": "<p>An array of items to display in the bottom row.\nEach item specifies its type (&#39;text&#39; or &#39;tag&#39;) and its value.</p>\n",
-                    "line": 45,
+                    "line": 44,
                     "type": "DataLineItem[]",
                     "decorators": []
                 },
@@ -2204,7 +2216,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe label for the middle info line (e.g., \"Lorem:\").\n",
                     "description": "<p>The label for the middle info line (e.g., &quot;Lorem:&quot;).</p>\n",
-                    "line": 29,
+                    "line": 28,
                     "type": "string",
                     "decorators": []
                 },
@@ -2215,7 +2227,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe plain text part of the info line.\n",
                     "description": "<p>The plain text part of the info line.</p>\n",
-                    "line": 34,
+                    "line": 33,
                     "type": "string",
                     "decorators": []
                 },
@@ -2226,7 +2238,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe version number in the tag on the info line.\n",
                     "description": "<p>The version number in the tag on the info line.</p>\n",
-                    "line": 39,
+                    "line": 38,
                     "type": "string",
                     "decorators": []
                 },
@@ -2237,7 +2249,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe main title next to the server icon.\n",
                     "description": "<p>The main title next to the server icon.</p>\n",
-                    "line": 24,
+                    "line": 23,
                     "type": "string",
                     "decorators": []
                 }
@@ -2259,8 +2271,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\nimport { CommonModule } from '@angular/common';\n\n/**\n * Defines the structure for an item in the data line,\n * which can be either plain text or a styled tag.\n */\nexport interface DataLineItem {\n  type: 'text' | 'tag';\n  value: string;\n}\n\n@Component({\n  selector: 'app-frametwo-card',\n  imports: [CommonModule],\n  templateUrl: './frametwo-card.component.html',\n  styleUrl: './frametwo-card.component.scss',\n})\nexport class FrametwoCardComponent {\n  /**\n   * The main title next to the server icon.\n   */\n  @Input() title: string = 'Loremipsu';\n\n  /**\n   * The label for the middle info line (e.g., \"Lorem:\").\n   */\n  @Input() infoLineLabel: string = 'Lorem:';\n\n  /**\n   * The plain text part of the info line.\n   */\n  @Input() infoLineText: string = 'Loremipsum Loremipsum';\n\n  /**\n   * The version number in the tag on the info line.\n   */\n  @Input() infoLineVersion: string = '1.2.3.4';\n\n  /**\n   * An array of items to display in the bottom row.\n   * Each item specifies its type ('text' or 'tag') and its value.\n   */\n  @Input() dataLineItems: DataLineItem[] = [\n    { type: 'tag', value: '1.2.3.4' },\n    { type: 'text', value: 'Loremipsum' },\n    { type: 'tag', value: '1.2.3.4' },\n    { type: 'tag', value: '1.2.3.4' },\n  ];\n}\n",
-            "styleUrl": "./frametwo-card.component.scss",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\nimport { CommonModule } from '@angular/common';\n\n/**\n * Defines the structure for an item in the data line,\n * which can be either plain text or a styled tag.\n */\nexport interface DataLineItem {\n  type: 'text' | 'tag';\n  value: string;\n}\n\n@Component({\n  selector: 'app-frametwo-card',\n  imports: [CommonModule],\n  templateUrl: './frametwo-card.component.html',\n})\nexport class FrametwoCardComponent {\n  /**\n   * The main title next to the server icon.\n   */\n  @Input() title: string = 'Loremipsu';\n\n  /**\n   * The label for the middle info line (e.g., \"Lorem:\").\n   */\n  @Input() infoLineLabel: string = 'Lorem:';\n\n  /**\n   * The plain text part of the info line.\n   */\n  @Input() infoLineText: string = 'Loremipsum Loremipsum';\n\n  /**\n   * The version number in the tag on the info line.\n   */\n  @Input() infoLineVersion: string = '1.2.3.4';\n\n  /**\n   * An array of items to display in the bottom row.\n   * Each item specifies its type ('text' or 'tag') and its value.\n   */\n  @Input() dataLineItems: DataLineItem[] = [\n    { type: 'tag', value: '1.2.3.4' },\n    { type: 'text', value: 'Loremipsum' },\n    { type: 'tag', value: '1.2.3.4' },\n    { type: 'tag', value: '1.2.3.4' },\n  ];\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -2269,7 +2280,7 @@
         },
         {
             "name": "ImageHoverComponent",
-            "id": "component-ImageHoverComponent-a82964282e48dc680aa6d43dffbf3e9ac32452eb26680dd7904d40fca38b879799be05446acf6f7eb45796daba28032c6fc6501279f41f6a4322cf6a9f66ab93",
+            "id": "component-ImageHoverComponent-69ac448a3d1e21cac8b7caa4fc39ebefc71d7f3180d358e6237daa6181e040005900919a2ffafd5c30b76ac7da6e21e6958d571a0fb3f97d7fb3393305797457",
             "file": "src/app/shared/components/image-hover/image-hover.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2291,7 +2302,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe component class to instantiate inside the popup on hover.\nType<any> is used to accept any component class.\n",
                     "description": "<p>The component class to instantiate inside the popup on hover.\nType<any> is used to accept any component class.</p>\n",
-                    "line": 29,
+                    "line": 28,
                     "type": "Type<any>",
                     "decorators": []
                 },
@@ -2302,7 +2313,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe URL of the image to be displayed.\n",
                     "description": "<p>The URL of the image to be displayed.</p>\n",
-                    "line": 14,
+                    "line": 13,
                     "type": "string",
                     "decorators": []
                 },
@@ -2313,7 +2324,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe position of the hover popup relative to the image.\n",
                     "description": "<p>The position of the hover popup relative to the image.</p>\n",
-                    "line": 23,
+                    "line": 22,
                     "type": "string",
                     "decorators": []
                 },
@@ -2322,7 +2333,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 18,
+                    "line": 17,
                     "type": "string",
                     "decorators": []
                 },
@@ -2331,7 +2342,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 16,
+                    "line": 15,
                     "type": "string",
                     "decorators": []
                 }
@@ -2346,7 +2357,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "<p>This is a reference to the <ng-container> in our template.\nWe use it as an anchor to tell Angular where to insert the dynamic component.\n{ read: ViewContainerRef } is crucial to get the container reference.</p>\n",
-                    "line": 37,
+                    "line": 36,
                     "rawdescription": "\n\nThis is a reference to the <ng-container> in our template.\nWe use it as an anchor to tell Angular where to insert the dynamic component.\n{ read: ViewContainerRef } is crucial to get the container reference.\n",
                     "decorators": [
                         {
@@ -2368,7 +2379,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 39
+                    "line": 38
                 }
             ],
             "methodsClass": [
@@ -2378,7 +2389,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 60,
+                    "line": 59,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -2388,7 +2399,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 41,
+                    "line": 40,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -2398,7 +2409,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 52,
+                    "line": 51,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -2417,8 +2428,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, ViewChild, ViewContainerRef, Type, OnDestroy } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'app-image-hover',\n  imports: [CommonModule],\n  templateUrl: './image-hover.component.html',\n  styleUrl: './image-hover.component.scss',\n})\nexport class ImageHoverComponent implements OnDestroy {\n  /**\n   * The URL of the image to be displayed.\n   */\n  @Input() imageUrl: string = '';\n\n  @Input() title: string = '';\n\n  @Input() subtitle: string = '';\n\n  /**\n   * The position of the hover popup relative to the image.\n   */\n  @Input() position: string = 'bottom-center';\n\n  /**\n   * The component class to instantiate inside the popup on hover.\n   * Type<any> is used to accept any component class.\n   */\n  @Input() hoverComponent?: Type<any>;\n\n  /**\n   * This is a reference to the <ng-container> in our template.\n   * We use it as an anchor to tell Angular where to insert the dynamic component.\n   * { read: ViewContainerRef } is crucial to get the container reference.\n   */\n  @ViewChild('dynamicComponentContainer', { read: ViewContainerRef })\n  private container!: ViewContainerRef;\n\n  isHovering = false;\n\n  onMouseEnter(): void {\n    this.isHovering = true;\n    // Only create the component if a class was provided\n    if (this.hoverComponent && this.container) {\n      // Clear any previous component instance\n      this.container.clear();\n      // Create a new instance of the component passed via the input\n      this.container.createComponent(this.hoverComponent);\n    }\n  }\n\n  onMouseLeave(): void {\n    this.isHovering = false;\n    // Clear the container to destroy the component instance for performance\n    if (this.container) {\n      this.container.clear();\n    }\n  }\n\n  ngOnDestroy(): void {\n    // Ensure the container is cleared if the host component is destroyed\n    if (this.container) {\n      this.container.clear();\n    }\n  }\n}\n",
-            "styleUrl": "./image-hover.component.scss",
+            "sourceCode": "import { Component, Input, ViewChild, ViewContainerRef, Type, OnDestroy } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'app-image-hover',\n  imports: [CommonModule],\n  templateUrl: './image-hover.component.html'\n})\nexport class ImageHoverComponent implements OnDestroy {\n  /**\n   * The URL of the image to be displayed.\n   */\n  @Input() imageUrl: string = '';\n\n  @Input() title: string = '';\n\n  @Input() subtitle: string = '';\n\n  /**\n   * The position of the hover popup relative to the image.\n   */\n  @Input() position: string = 'bottom-center';\n\n  /**\n   * The component class to instantiate inside the popup on hover.\n   * Type<any> is used to accept any component class.\n   */\n  @Input() hoverComponent?: Type<any>;\n\n  /**\n   * This is a reference to the <ng-container> in our template.\n   * We use it as an anchor to tell Angular where to insert the dynamic component.\n   * { read: ViewContainerRef } is crucial to get the container reference.\n   */\n  @ViewChild('dynamicComponentContainer', { read: ViewContainerRef })\n  private container!: ViewContainerRef;\n\n  isHovering = false;\n\n  onMouseEnter(): void {\n    this.isHovering = true;\n    // Only create the component if a class was provided\n    if (this.hoverComponent && this.container) {\n      // Clear any previous component instance\n      this.container.clear();\n      // Create a new instance of the component passed via the input\n      this.container.createComponent(this.hoverComponent);\n    }\n  }\n\n  onMouseLeave(): void {\n    this.isHovering = false;\n    // Clear the container to destroy the component instance for performance\n    if (this.container) {\n      this.container.clear();\n    }\n  }\n\n  ngOnDestroy(): void {\n    // Ensure the container is cleared if the host component is destroyed\n    if (this.container) {\n      this.container.clear();\n    }\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -2548,7 +2558,7 @@
         },
         {
             "name": "RemediationCardComponent",
-            "id": "component-RemediationCardComponent-89e71edb868be553407ac02376916d4710c571e9ea410286b614eb117ccb3c77f880a9e47716f8599fe1b9bf2c25bf27333f541f4376f46a1e54841cc2f34ab9",
+            "id": "component-RemediationCardComponent-61ed69010188d9a91628124baef5da0beb839b440531041b5427fcac1e8f54bbfac2e82beedd1d9e201fe8c3cd86514a4e17caa4c9f6afe33744e8dd71428d68",
             "file": "src/app/features/dashboard/components/remediation-card/remediation-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2569,7 +2579,7 @@
                     "defaultValue": "'Lorem Ipsum Dolor Sit Amet Consectetur.'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 13,
                     "type": "string",
                     "decorators": []
                 },
@@ -2578,7 +2588,7 @@
                     "defaultValue": "'Lorem Ipsum Dolor Sit Amet Consectetur. Nunc Vitae Tortor Convallis Vitae Arcu. Magna.'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 15,
+                    "line": 14,
                     "type": "string",
                     "decorators": []
                 },
@@ -2587,7 +2597,7 @@
                     "defaultValue": "'Server'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 12,
                     "type": "string",
                     "decorators": []
                 },
@@ -2596,7 +2606,7 @@
                     "defaultValue": "'Server'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 11,
                     "type": "string",
                     "decorators": []
                 }
@@ -2607,7 +2617,7 @@
                     "defaultValue": "new EventEmitter<void>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 17,
+                    "line": 16,
                     "type": "EventEmitter"
                 }
             ],
@@ -2621,7 +2631,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 19
+                    "line": 18
                 }
             ],
             "methodsClass": [
@@ -2631,7 +2641,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 21,
+                    "line": 20,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -2650,8 +2660,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'app-remediation-card',\n  templateUrl: './remediation-card.component.html',\n  styleUrl: './remediation-card.component.scss',\n  standalone: true,\n  imports: [CommonModule],\n})\nexport class RemediationCardComponent {\n  @Input() title: string = 'Server';\n  @Input() header: string = 'Server';\n  @Input() defaultText: string = 'Lorem Ipsum Dolor Sit Amet Consectetur.';\n  @Input() expandableText: string =\n    'Lorem Ipsum Dolor Sit Amet Consectetur. Nunc Vitae Tortor Convallis Vitae Arcu. Magna.';\n  @Output() cardClicked = new EventEmitter<void>();\n\n  isOpen = false;\n\n  toggle() {\n    this.isOpen = !this.isOpen;\n    this.cardClicked.emit();\n  }\n}\n",
-            "styleUrl": "./remediation-card.component.scss",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'app-remediation-card',\n  templateUrl: './remediation-card.component.html',\n  standalone: true,\n  imports: [CommonModule],\n})\nexport class RemediationCardComponent {\n  @Input() title: string = 'Server';\n  @Input() header: string = 'Server';\n  @Input() defaultText: string = 'Lorem Ipsum Dolor Sit Amet Consectetur.';\n  @Input() expandableText: string =\n    'Lorem Ipsum Dolor Sit Amet Consectetur. Nunc Vitae Tortor Convallis Vitae Arcu. Magna.';\n  @Output() cardClicked = new EventEmitter<void>();\n\n  isOpen = false;\n\n  toggle() {\n    this.isOpen = !this.isOpen;\n    this.cardClicked.emit();\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -2936,7 +2945,7 @@
         },
         {
             "name": "VulnerabilitiesCardComponent",
-            "id": "component-VulnerabilitiesCardComponent-e8764e3e67b425dfec1358e374842b501935af2c257878ded5568f5e7f7c745a0acbd3edbf8df8e8555e431154e7b675f01d2df85509d6890f1bcc295c7a86c0",
+            "id": "component-VulnerabilitiesCardComponent-cc5f5584c94ba4524d78ff44cbd6a36cc69125c33ba72d0b1441afee541ab41f8a7e63a4fe72a87fd669d7c222ce865975f2afb34bed337fbff8fd0b03795402",
             "file": "src/app/features/dashboard/components/vulnerabilities-card/vulnerabilities-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -3014,8 +3023,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-vulnerabilities-card',\n  templateUrl: './vulnerabilities-card.component.html',\n  styleUrl: './vulnerabilities-card.component.scss',\n  imports: [CommonModule],\n  standalone: true,\n})\nexport class VulnerabilitiesCardComponent {\n  /**\n   * The main title for the vulnerability section.\n   */\n  @Input() title: string = 'Lorem Ipsum Dolor Sit';\n\n  /**\n   * An array of strings representing the vulnerable versions.\n   */\n  @Input() vulnerableVersions: string[] = [\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n  ];\n\n  /**\n   * The label for the patched version information.\n   */\n  @Input() patchedVersionLabel: string = 'Lorem';\n\n  /**\n   * The version number that contains the fix.\n   */\n  @Input() patchedVersion: string = '1.2.3.4';\n}\n",
-            "styleUrl": "./vulnerabilities-card.component.scss",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-vulnerabilities-card',\n  templateUrl: './vulnerabilities-card.component.html',\n    standalone: true,\n  imports: [CommonModule],\n\n})\nexport class VulnerabilitiesCardComponent {\n  /**\n   * The main title for the vulnerability section.\n   */\n  @Input() title: string = 'Lorem Ipsum Dolor Sit';\n\n  /**\n   * An array of strings representing the vulnerable versions.\n   */\n  @Input() vulnerableVersions: string[] = [\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n  ];\n\n  /**\n   * The label for the patched version information.\n   */\n  @Input() patchedVersionLabel: string = 'Lorem';\n\n  /**\n   * The version number that contains the fix.\n   */\n  @Input() patchedVersion: string = '1.2.3.4';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -3162,7 +3170,7 @@
                 "linktype": "injectable",
                 "name": "NavigationService",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {

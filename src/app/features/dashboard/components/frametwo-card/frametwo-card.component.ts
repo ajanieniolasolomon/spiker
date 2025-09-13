@@ -15,7 +15,6 @@ export interface DataLineItem {
   selector: 'app-frametwo-card',
   imports: [CommonModule],
   templateUrl: './frametwo-card.component.html',
-  styleUrl: './frametwo-card.component.scss',
 })
 export class FrametwoCardComponent {
   /**

@@ -110,9 +110,7 @@
           "options": {
             "configDir": ".storybook",
             "browserTarget": "spiker:build",
-            "styles": [
-              "src/styles.scss"
-            ],
+          
             "compodoc": true,
             "compodocArgs": [
               "-e",
