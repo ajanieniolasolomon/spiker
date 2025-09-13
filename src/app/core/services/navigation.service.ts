@@ -1,4 +1,5 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 export interface NavigationState {
   activeItemId: string;
@@ -11,8 +12,10 @@ export interface NavigationState {
   providedIn: 'root',
 })
 export class NavigationService {
+  private readonly _router = inject(Router);
+
   private readonly _navigationState = signal<NavigationState>({
-    activeItemId: 'discover',
+    activeItemId: 'dashboard',
     userName: 'Lorem',
     userRole: 'Lorem',
     isSidenavExpanded: false,
@@ -44,7 +47,19 @@ export class NavigationService {
 
   public handleNavItemClick(itemId: string): void {
     this.setActiveItem(itemId);
-    console.log('Navigation item clicked:', itemId);
+
+    // Navigate to the appropriate route based on the item clicked
+    switch (itemId) {
+      case 'dashboard':
+        this._router.navigate(['/dashboard']);
+        break;
+      case 'discover':
+        this._router.navigate(['/dashboard']); // For now, all routes go to dashboard
+        break;
+      default:
+        console.log('Navigation item clicked:', itemId);
+      // Add more routes as needed
+    }
   }
 
   public handleLogout(): void {

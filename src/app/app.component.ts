@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { SidenavComponent } from './layout/components/sidenav/sidenav.component';
 import { NavigationService } from './core/services/navigation.service';
-import { DashboardComponent } from './features/dashboard/components/dashboard/dashboard.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, SidenavComponent, DashboardComponent],
+  imports: [CommonModule, RouterOutlet, SidenavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
