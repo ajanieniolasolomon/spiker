@@ -1,0 +1,17 @@
+.expandable-content {
+  display: grid;
+  /* Start with zero rows, effectively hiding the content */
+  grid-template-rows: 0fr;
+  /* Animate the change in grid-template-rows */
+  transition: grid-template-rows 0.5s ease-in-out;
+}
+
+.expandable-content.open {
+  /* Expand to one fraction, taking up the necessary space for its content */
+  grid-template-rows: 1fr;
+}
+
+/* This inner container prevents content from "spilling out" during the animation */
+.expandable-content > div {
+  overflow: hidden;
+}

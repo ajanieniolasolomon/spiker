@@ -1,0 +1,36 @@
+<!-- Main container with shadow and rounded corners -->
+<div class="bg-white rounded-[15px] p-5 max-w-lg shadow-[0_4px_12px_rgba(0,0,0,0.10)]">
+  <!-- Top Section: Icon and Title -->
+  <div class="flex items-center space-x-4">
+    <img src="frametwo.svg" alt="frameone" class="h-10 w-10" />
+    <h3 class="font-semibold text-sm text-[#525D73]">{{ title }}</h3>
+  </div>
+
+  <!-- Middle Section: Info Line -->
+  <div class="flex items-center mt-6 space-x-2 flex-wrap">
+    <!-- Document Icon -->
+    <img src="edit.svg" alt="edit" class="h-5 w-5" />
+    <p class="font-bold text-[#525D73]">{{ infoLineLabel }}</p>
+    <p class="text-[#525D73]">{{ infoLineText }}</p>
+    <span class="bg-[#F2EDFF] text-[#6236CC] text-sm font-semibold px-2 py-1 rounded-md">
+      {{ infoLineVersion }}
+    </span>
+  </div>
+
+  <!-- Bottom Section: Dynamic Data Line -->
+  <div class="flex items-center mt-4 space-x-2 flex-wrap">
+    <ng-container *ngFor="let item of dataLineItems">
+      <!-- Render a styled tag -->
+      <span
+        *ngIf="item.type === 'tag'"
+        class="bg-[#F2EDFF] text-[#6236CC] text-sm font-semibold px-2 py-1 rounded-md"
+      >
+        {{ item.value }}
+      </span>
+      <!-- Render plain text -->
+      <span *ngIf="item.type === 'text'" class="text-gray-700">
+        {{ item.value }}
+      </span>
+    </ng-container>
+  </div>
+</div>

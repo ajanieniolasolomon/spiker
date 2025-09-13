@@ -1,0 +1,221 @@
+<div
+  class="p-6 lg:p-8 flex flex-col lg:flex-row gap-6 lg:gap-8 h-full overflow-y-auto lg:overflow-y-hidden"
+>
+  <!-- Left Panel -->
+  <div
+    class="w-full lg:w-[33%] flex-shrink-0 bg-white rounded-[20px] shadow-[0_4px_12px_rgba(0,0,0,0.10)] flex flex-col lg:h-full lg:overflow-y-auto p-4 no-scrollbar"
+  >
+    <app-note
+      [title]="dashboardData().textOne.title"
+      [subtitle]="dashboardData().textOne.subtitle"
+    ></app-note>
+    <app-note
+      [title]="dashboardData().textTwo.title"
+      [subtitle]="dashboardData().textTwo.subtitle"
+    ></app-note>
+
+    <hr class="my-6 border-gray-200" />
+
+    <div class="mb-4">
+      <h3 class="text-lg sm:text-xl font-bold">Lorem ipsum dolor sit</h3>
+    </div>
+
+    <app-list [items]="dashboardData().defaultItems"></app-list>
+
+    <hr class="my-6 border-gray-200" />
+
+    <app-remediation-card
+      [title]="dashboardData().remediationOne.title"
+      [header]="dashboardData().remediationOne.header"
+      [defaultText]="dashboardData().remediationOne.defaultText"
+      [expandableText]="dashboardData().remediationOne.expandableText"
+    >
+    </app-remediation-card>
+
+    <app-remediation-card
+      [title]="dashboardData().remediationTwo.title"
+      [header]="dashboardData().remediationTwo.header"
+      [defaultText]="dashboardData().remediationTwo.defaultText"
+      [expandableText]="dashboardData().remediationTwo.expandableText"
+    >
+    </app-remediation-card>
+  </div>
+
+  <!-- Main Content Panel -->
+  <div class="w-full p-5 lg:w-[100%] bg-white rounded-[15px] flex flex-col lg:overflow-y-auto">
+    <app-note [title]="'Lorem Lorem Lorem'" [subtitle]="''"></app-note>
+
+    <div
+      class="bg-[#FAFAFA] overflow-x-auto lg:overflow-visible p-6 rounded-[15px] relative on-scrollbar"
+    >
+      <!-- Zoom Controls -->
+      <div class="absolute top-4 right-4 z-10 hidden lg:flex items-center space-x-2">
+        <button
+          (click)="zoomOut()"
+          class="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow hover:bg-gray-100 transition-colors"
+          aria-label="Zoom out"
+        >
+          <svg
+            class="w-5 h-5 text-gray-600"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+          </svg>
+        </button>
+        <button
+          (click)="zoomIn()"
+          class="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow hover:bg-gray-100 transition-colors"
+          aria-label="Zoom in"
+        >
+          <svg
+            class="w-5 h-5 text-gray-600"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+          </svg>
+        </button>
+        <button
+          (click)="resetZoom()"
+          class="bg-white w-8 h-8 rounded-full flex items-center justify-center shadow hover:bg-gray-100 transition-colors"
+          aria-label="Reset zoom"
+        >
+          <svg
+            class="w-5 h-5 text-gray-600"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991-2.695v-4.992m0 0h-4.992m4.992 0l-3.181-3.183a8.25 8.25 0 00-11.667 0L2.985 7.348z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Network Diagram -->
+      <div class="flex items-center" [style.transform]="transformStyle()">
+        <!-- Node A -->
+        <div class="flex flex-col items-center text-center flex-shrink-0">
+          <app-image-hover
+            [imageUrl]="dashboardData().nodeA.imageUrl"
+            [position]="dashboardData().nodeA.position"
+            [title]="dashboardData().nodeA.title"
+            [hoverComponent]="dashboardData().nodeA.hoverComponent"
+            [subtitle]="dashboardData().nodeA.subtitle"
+          >
+          </app-image-hover>
+        </div>
+
+        <img src="arrow.svg" alt="Connector Arrow" class="w-24 mx-4 flex-shrink-0" />
+
+        <!-- Nodes B & C -->
+        <div
+          class="flex items-center"
+          *ngFor="let nodeBC of dashboardData().nodesBC; let i = index"
+        >
+          <div class="flex flex-col items-center text-center flex-shrink-0">
+            <app-image-hover
+              [imageUrl]="nodeBC.imageUrl"
+              [position]="nodeBC.position"
+              [title]="nodeBC.title"
+              [hoverComponent]="nodeBC.hoverComponent"
+              [subtitle]="nodeBC.subtitle"
+            >
+            </app-image-hover>
+          </div>
+          <img
+            *ngIf="i < 1"
+            src="arrow.svg"
+            alt="Connector Arrow"
+            class="w-24 mx-4 flex-shrink-0"
+          />
+        </div>
+
+        <!-- Forking Connector -->
+        <div class="w-48 h-24 flex-shrink-0 mx-4">
+          <img
+            src="forking-connector.svg"
+            alt="Forking Connector"
+            class="w-full h-full object-contain"
+          />
+        </div>
+
+        <!-- End Nodes -->
+        <div class="flex flex-col space-y-8">
+          <!-- Node CD -->
+          <div class="flex items-center space-x-3">
+            <div class="relative flex-shrink-0">
+              <app-image-hover
+                [imageUrl]="dashboardData().nodeCD.imageUrl"
+                [position]="dashboardData().nodeCD.position"
+                [title]="dashboardData().nodeCD.title"
+                [hoverComponent]="dashboardData().nodeCD.hoverComponent"
+                [subtitle]="dashboardData().nodeCD.subtitle"
+              >
+              </app-image-hover>
+            </div>
+          </div>
+          <!-- Node EF -->
+          <div class="flex items-center space-x-3">
+            <div class="relative flex-shrink-0">
+              <app-image-hover
+                [imageUrl]="dashboardData().nodeEF.imageUrl"
+                [position]="dashboardData().nodeEF.position"
+                [title]="dashboardData().nodeEF.title"
+                [hoverComponent]="dashboardData().nodeEF.hoverComponent"
+                [subtitle]="dashboardData().nodeEF.subtitle"
+              >
+              </app-image-hover>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-6 border-gray-200" />
+
+      <!-- Status Indicators -->
+      <div class="flex items-center space-x-6">
+        <app-status status="error" title="Lorem"></app-status>
+        <app-status status="warning" title="Lorem"></app-status>
+        <app-status status="success" title="Lorem"></app-status>
+      </div>
+    </div>
+
+    <app-note [title]="'Lorem ipsum dolor sit'" [subtitle]="''"></app-note>
+
+    <!-- Context Cards -->
+    <div class="flex gap-4 flex-col lg:flex-row">
+      <div class="flex-1">
+        <app-context-risk-card
+          [assetItems]="dashboardData().contextRisk.assetItems"
+          [currentPageStart]="dashboardData().contextRisk.currentPageStart"
+          [currentPageEnd]="dashboardData().contextRisk.currentPageEnd"
+          [totalItems]="dashboardData().contextRisk.totalItems"
+        >
+        </app-context-risk-card>
+      </div>
+
+      <div class="flex-1">
+        <app-context-analytic-card
+          [criticalCount]="dashboardData().contextAnalytic.criticalCount"
+          [highCount]="dashboardData().contextAnalytic.highCount"
+          [mediumCount]="dashboardData().contextAnalytic.mediumCount"
+          [lowCount]="dashboardData().contextAnalytic.lowCount"
+        >
+        </app-context-analytic-card>
+      </div>
+    </div>
+  </div>
+</div>

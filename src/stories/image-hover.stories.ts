@@ -1,10 +1,9 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { ImageHoverComponent } from '../components/image-hover/image-hover.component';
-import { FrameoneCardComponent } from '../components/frameone-card/frameone-card.component';
-import { FrametwoCardComponent } from '../components/frametwo-card/frametwo-card.component';
-import { FramethreeCardComponent } from '../components/framethree-card/framethree-card.component';
-
+import { ImageHoverComponent } from '../app/shared/components';
+import { FrameoneCardComponent } from '../app/features/dashboard/components/frameone-card/frameone-card.component';
+import { FrametwoCardComponent } from '../app/features/dashboard/components/frametwo-card/frametwo-card.component';
+import { FramethreeCardComponent } from '../app/features/dashboard/components/framethree-card/framethree-card.component';
 
 export default {
   title: 'Components/ImageHover (Dynamic Component)',
@@ -60,7 +59,6 @@ export const WithFrame2Component: Story = {
     hoverComponent: FrametwoCardComponent,
   },
 };
-
 
 export const WithFrame3Component: Story = {
   args: {

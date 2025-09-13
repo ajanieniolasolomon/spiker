@@ -1,7 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { FrameoneCardComponent } from '../components/frameone-card/frameone-card.component';
-
+import { FrameoneCardComponent } from '../app/features/dashboard/components/frameone-card/frameone-card.component';
 
 export default {
   title: 'Components/FrameOneCard',
@@ -51,15 +50,15 @@ export const SafeState: Story = {
 
 // Story with different data to show reusability
 export const AnotherExample: Story = {
-    args: {
-      title: 'Production-Database-01',
-      subtitle: '10.0.2.15',
-      hasWarning: false,
-      infoLabel: 'Status:',
-      infoTextPrimary: 'System',
-      infoTextSecondary: '"Online"',
-      dataLabel: 'Connections',
-      dataValuePrimary: 'Active',
-      dataValueSecondary: '4,812',
-    },
-  };
+  args: {
+    title: 'Production-Database-01',
+    subtitle: '10.0.2.15',
+    hasWarning: false,
+    infoLabel: 'Status:',
+    infoTextPrimary: 'System',
+    infoTextSecondary: '"Online"',
+    dataLabel: 'Connections',
+    dataValuePrimary: 'Active',
+    dataValueSecondary: '4,812',
+  },
+};

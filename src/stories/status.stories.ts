@@ -1,6 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { StatusComponent } from '../components/status/status.component';
+import { StatusComponent } from '../app/shared/components';
 
 export default {
   title: 'Components/Status',
@@ -57,13 +57,13 @@ export const WithSubtitle: Story = {
 
 // Story to show all statuses together, as in the original image
 export const AllStatuses: Story = {
-    render: () => ({
-        template: `
+  render: () => ({
+    template: `
             <div class="flex items-center space-x-6">
                 <app-status status="error" title="Lorem"></app-status>
                 <app-status status="warning" title="Lorem"></app-status>
                 <app-status status="success" title="Lorem"></app-status>
             </div>
-        `
-    })
-}
+        `,
+  }),
+};

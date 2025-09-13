@@ -96,12 +96,21 @@
             "scripts": []
           }
         },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        },
         "storybook": {
           "builder": "@storybook/angular:start-storybook",
           "options": {
             "configDir": ".storybook",
             "browserTarget": "spiker:build",
-        "styles": [
+            "styles": [
               "src/styles.scss"
             ],
             "compodoc": true,
@@ -119,6 +128,9 @@
           "options": {
             "configDir": ".storybook",
             "browserTarget": "spiker:build",
+            "styles": [
+              "src/styles.scss"
+            ],
             "compodoc": true,
             "compodocArgs": [
               "-e",

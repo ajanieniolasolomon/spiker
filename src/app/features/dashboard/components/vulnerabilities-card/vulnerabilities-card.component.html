@@ -1,0 +1,26 @@
+<!-- Main container with border and rounded corners -->
+<div class="bg-white rounded-[15px] p-5 max-w-lg shadow-[0_4px_12px_rgba(0,0,0,0.10)]">
+  <!-- Top Section: Title and Vulnerable Versions -->
+  <div class="">
+    <!-- Title Tag -->
+    <span class="bg-[#FFF1F2] text-[#C01634] text-sm font-medium px-3 py-1.5 rounded-lg">
+      {{ title }}
+    </span>
+
+    <!-- Grid for Vulnerable Versions -->
+    <div class="grid grid-cols-3 gap-x-2 gap-y-2 mt-4 ml-0 sm:ml-8">
+      <ng-container *ngFor="let version of vulnerableVersions">
+        <span class="bg-red-50 text-[#C01634] text-sm font-medium px-1 py-1.5 rounded-lg text-left">
+          {{ version }}
+        </span>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- Bottom Section: Patched Version -->
+  <div class="mt-6">
+    <span class="bg-[#F2EDFF] text-[#6236CC] text-sm font-medium px-3 py-1.5 rounded-lg">
+      {{ patchedVersionLabel }}: {{ patchedVersion }}
+    </span>
+  </div>
+</div>

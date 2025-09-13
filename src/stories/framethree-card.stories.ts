@@ -1,6 +1,9 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { ContentBlock, FramethreeCardComponent } from '../components/framethree-card/framethree-card.component';
+import {
+  ContentBlock,
+  FramethreeCardComponent,
+} from '../app/features/dashboard/components/framethree-card/framethree-card.component';
 
 export default {
   title: 'Components/FrameThreeCard',

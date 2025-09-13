@@ -1,15 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-@use "tailwindcss";
+@use 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 .no-scrollbar::-webkit-scrollbar {
-display: none; /* For Chrome, Safari, and Opera */
+  display: none; /* For Chrome, Safari, and Opera */
 }
 .no-scrollbar {
--ms-overflow-style: none; /* For Internet Explorer and Edge /
+  -ms-overflow-style: none; /* For Internet Explorer and Edge /
 scrollbar-width: none; / For Firefox */
 }
 
-*{
-      font-family: "Public Sans", sans-serif;
+* {
+  font-family: 'Public Sans', sans-serif;
 }

@@ -1,7 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { VulnerabilitiesCardComponent } from '../components/vulnerabilities-card/vulnerabilities-card.component';
-
+import { VulnerabilitiesCardComponent } from '../app/features/dashboard/components/vulnerabilities-card/vulnerabilities-card.component';
 
 export default {
   title: 'Components/Vulnerabilities Info',
@@ -37,10 +36,7 @@ type Story = StoryObj<VulnerabilitiesCardComponent>;
 export const Default: Story = {
   args: {
     title: 'Lorem Ipsum Dolor Sit',
-    vulnerableVersions: [
-      '1.2.3.4', '1.2.3.4', '1.2.3.4',
-      '1.2.3.4', '1.2.3.4', '1.2.3.4'
-    ],
+    vulnerableVersions: ['1.2.3.4', '1.2.3.4', '1.2.3.4', '1.2.3.4', '1.2.3.4', '1.2.3.4'],
     patchedVersionLabel: 'Lorem',
     patchedVersion: '1.2.3.4',
   },
@@ -48,26 +44,30 @@ export const Default: Story = {
 
 // A second story to show how the component adapts to fewer versions
 export const FewerVersions: Story = {
-    args: {
-      title: 'Affected Versions',
-      vulnerableVersions: [
-        '2.1.0', '2.1.1', '2.2.0'
-      ],
-      patchedVersionLabel: 'Patched in',
-      patchedVersion: '2.2.1',
-    },
-  };
+  args: {
+    title: 'Affected Versions',
+    vulnerableVersions: ['2.1.0', '2.1.1', '2.2.0'],
+    patchedVersionLabel: 'Patched in',
+    patchedVersion: '2.2.1',
+  },
+};
 
 // A third story to show how it handles a long list that wraps
 export const ManyVersions: Story = {
-    args: {
-      title: 'Lorem Ipsum Dolor Sit',
-      vulnerableVersions: [
-        '1.0.0', '1.0.1', '1.1.0',
-        '1.1.2', '1.1.3', '1.2.0',
-        '1.2.1', '1.2.2', '1.3.0',
-      ],
-      patchedVersionLabel: 'Upgrade to',
-      patchedVersion: '1.3.1',
-    },
-  };
+  args: {
+    title: 'Lorem Ipsum Dolor Sit',
+    vulnerableVersions: [
+      '1.0.0',
+      '1.0.1',
+      '1.1.0',
+      '1.1.2',
+      '1.1.3',
+      '1.2.0',
+      '1.2.1',
+      '1.2.2',
+      '1.3.0',
+    ],
+    patchedVersionLabel: 'Upgrade to',
+    patchedVersion: '1.3.1',
+  },
+};
