@@ -1,6 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { SidenavComponent } from '../components/sidenav/sidenav.component';
+import { SidenavComponent } from '../app/layout/components/sidenav/sidenav.component';
 
 export default {
   title: 'Layout/Sidenav',
@@ -25,7 +25,7 @@ export default {
     logoutClicked: { action: 'logoutClicked' },
   },
   // Add a wrapper to the story to simulate page content
-  render: (args) => ({
+  render: args => ({
     props: args,
     template: `
       <div class="flex h-screen ">

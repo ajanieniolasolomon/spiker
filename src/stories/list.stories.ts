@@ -1,7 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { ListComponent, ListItem } from '../components/list/list.component';
-
+import { ListComponent, ListItem } from '../app/shared/components';
 
 export default {
   title: 'Components/List',

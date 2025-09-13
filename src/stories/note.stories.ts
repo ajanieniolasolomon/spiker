@@ -1,7 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { NoteComponent } from '../components/note/note.component';
-
+import { NoteComponent } from '../app/shared/components';
 
 export default {
   title: 'Components/Note',
@@ -29,7 +28,8 @@ type Story = StoryObj<NoteComponent>;
 export const Default: Story = {
   args: {
     title: 'Description',
-    subtitle: 'Lorem Ipsum Dolor Sit Amet Consectetur. Aenean Sodales Pellentesque Gravida Nibh Et Magna Faucibus. Dui Commodo Ut Metus Amet Egestas Habitant Viverra. Quisque Fusce Senectus Facilisis Non Diam Leo Nulla Sem Pellentesque. Sit In Vel Sed Cursus Metus Sit Fringilla Vestibulum.',
+    subtitle:
+      'Lorem Ipsum Dolor Sit Amet Consectetur. Aenean Sodales Pellentesque Gravida Nibh Et Magna Faucibus. Dui Commodo Ut Metus Amet Egestas Habitant Viverra. Quisque Fusce Senectus Facilisis Non Diam Leo Nulla Sem Pellentesque. Sit In Vel Sed Cursus Metus Sit Fringilla Vestibulum.',
   },
 };
 
@@ -43,8 +43,9 @@ export const TitleOnly: Story = {
 
 // Story with different content to show reusability
 export const AnotherExample: Story = {
-    args: {
-      title: 'Usage Instructions',
-      subtitle: 'This component should be used to display important information or descriptions that require a clear and distinct header.',
-    },
-  };
+  args: {
+    title: 'Usage Instructions',
+    subtitle:
+      'This component should be used to display important information or descriptions that require a clear and distinct header.',
+  },
+};

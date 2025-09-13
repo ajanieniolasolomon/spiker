@@ -1,7 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { FrametwoCardComponent } from '../components/frametwo-card/frametwo-card.component';
-
+import { FrametwoCardComponent } from '../app/features/dashboard/components/frametwo-card/frametwo-card.component';
 
 export default {
   title: 'Components/FrameTwoCard',
