@@ -1991,7 +1991,7 @@
         },
         {
             "name": "FrameoneCardComponent",
-            "id": "component-FrameoneCardComponent-0b42618dc47373344be1e9392b05c46d9bd0d1c408a71e32583e84b9ededd82bdb3092c2d9554f6e982160426d8c7aac08a50fe3f5b9b84cafc5e0f9abca3115",
+            "id": "component-FrameoneCardComponent-7bd696459ead5366e298ae5ed5ec55107fd24ff79bf78bafc96c1a6dee650ded8ee306ca0ac3a0275595ed314d7d0de70aac8c63851d4a2b5f8c51d9466d6213",
             "file": "src/app/features/dashboard/components/frameone-card/frameone-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2108,7 +2108,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-frameone-card',\n  imports: [CommonModule],\n  templateUrl: './frameone-card.component.html'\n})\nexport class FrameoneCardComponent {\n  /**\n   * The main title of the card.\n   */\n  @Input() title: string = 'Loremipsumdolorsit';\n\n  @Input() subtitle: string = '192.168.1.1';\n\n  @Input() hasWarning: boolean = true;\n\n  @Input() infoLabel: string = 'Lorem:';\n\n  @Input() infoTextPrimary: string = 'Lorem';\n\n  @Input() infoTextSecondary: string = '\"Ipsum\"';\n\n  @Input() dataLabel: string = 'Loremipsum';\n\n  @Input() dataValuePrimary: string = 'Lorem';\n\n  @Input() dataValueSecondary: string = '1234,5678';\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-frameone-card',\n  imports: [CommonModule],\n  templateUrl: './frameone-card.component.html',\n})\nexport class FrameoneCardComponent {\n  /**\n   * The main title of the card.\n   */\n  @Input() title: string = 'Loremipsumdolorsit';\n\n  @Input() subtitle: string = '192.168.1.1';\n\n  @Input() hasWarning: boolean = true;\n\n  @Input() infoLabel: string = 'Lorem:';\n\n  @Input() infoTextPrimary: string = 'Lorem';\n\n  @Input() infoTextSecondary: string = '\"Ipsum\"';\n\n  @Input() dataLabel: string = 'Loremipsum';\n\n  @Input() dataValuePrimary: string = 'Lorem';\n\n  @Input() dataValueSecondary: string = '1234,5678';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -2280,7 +2280,7 @@
         },
         {
             "name": "ImageHoverComponent",
-            "id": "component-ImageHoverComponent-69ac448a3d1e21cac8b7caa4fc39ebefc71d7f3180d358e6237daa6181e040005900919a2ffafd5c30b76ac7da6e21e6958d571a0fb3f97d7fb3393305797457",
+            "id": "component-ImageHoverComponent-05631b50d40289a5d62abd4580c473d4e7c6abd024e279a705af67106c4973bd6e2dfc737738f6251a2dbf641e975f39940e64eb5b2a70b9f56e0bce42659823",
             "file": "src/app/shared/components/image-hover/image-hover.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2428,7 +2428,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, ViewChild, ViewContainerRef, Type, OnDestroy } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'app-image-hover',\n  imports: [CommonModule],\n  templateUrl: './image-hover.component.html'\n})\nexport class ImageHoverComponent implements OnDestroy {\n  /**\n   * The URL of the image to be displayed.\n   */\n  @Input() imageUrl: string = '';\n\n  @Input() title: string = '';\n\n  @Input() subtitle: string = '';\n\n  /**\n   * The position of the hover popup relative to the image.\n   */\n  @Input() position: string = 'bottom-center';\n\n  /**\n   * The component class to instantiate inside the popup on hover.\n   * Type<any> is used to accept any component class.\n   */\n  @Input() hoverComponent?: Type<any>;\n\n  /**\n   * This is a reference to the <ng-container> in our template.\n   * We use it as an anchor to tell Angular where to insert the dynamic component.\n   * { read: ViewContainerRef } is crucial to get the container reference.\n   */\n  @ViewChild('dynamicComponentContainer', { read: ViewContainerRef })\n  private container!: ViewContainerRef;\n\n  isHovering = false;\n\n  onMouseEnter(): void {\n    this.isHovering = true;\n    // Only create the component if a class was provided\n    if (this.hoverComponent && this.container) {\n      // Clear any previous component instance\n      this.container.clear();\n      // Create a new instance of the component passed via the input\n      this.container.createComponent(this.hoverComponent);\n    }\n  }\n\n  onMouseLeave(): void {\n    this.isHovering = false;\n    // Clear the container to destroy the component instance for performance\n    if (this.container) {\n      this.container.clear();\n    }\n  }\n\n  ngOnDestroy(): void {\n    // Ensure the container is cleared if the host component is destroyed\n    if (this.container) {\n      this.container.clear();\n    }\n  }\n}\n",
+            "sourceCode": "import { Component, Input, ViewChild, ViewContainerRef, Type, OnDestroy } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'app-image-hover',\n  imports: [CommonModule],\n  templateUrl: './image-hover.component.html',\n})\nexport class ImageHoverComponent implements OnDestroy {\n  /**\n   * The URL of the image to be displayed.\n   */\n  @Input() imageUrl: string = '';\n\n  @Input() title: string = '';\n\n  @Input() subtitle: string = '';\n\n  /**\n   * The position of the hover popup relative to the image.\n   */\n  @Input() position: string = 'bottom-center';\n\n  /**\n   * The component class to instantiate inside the popup on hover.\n   * Type<any> is used to accept any component class.\n   */\n  @Input() hoverComponent?: Type<any>;\n\n  /**\n   * This is a reference to the <ng-container> in our template.\n   * We use it as an anchor to tell Angular where to insert the dynamic component.\n   * { read: ViewContainerRef } is crucial to get the container reference.\n   */\n  @ViewChild('dynamicComponentContainer', { read: ViewContainerRef })\n  private container!: ViewContainerRef;\n\n  isHovering = false;\n\n  onMouseEnter(): void {\n    this.isHovering = true;\n    // Only create the component if a class was provided\n    if (this.hoverComponent && this.container) {\n      // Clear any previous component instance\n      this.container.clear();\n      // Create a new instance of the component passed via the input\n      this.container.createComponent(this.hoverComponent);\n    }\n  }\n\n  onMouseLeave(): void {\n    this.isHovering = false;\n    // Clear the container to destroy the component instance for performance\n    if (this.container) {\n      this.container.clear();\n    }\n  }\n\n  ngOnDestroy(): void {\n    // Ensure the container is cleared if the host component is destroyed\n    if (this.container) {\n      this.container.clear();\n    }\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -2558,7 +2558,7 @@
         },
         {
             "name": "RemediationCardComponent",
-            "id": "component-RemediationCardComponent-61ed69010188d9a91628124baef5da0beb839b440531041b5427fcac1e8f54bbfac2e82beedd1d9e201fe8c3cd86514a4e17caa4c9f6afe33744e8dd71428d68",
+            "id": "component-RemediationCardComponent-1ebee645d90f45c4973e995c58e9c87c9a9351723dd55008691679a19c9ef46dce60df1ad934201422066f7fa5f0d58612be5f5992ca5b7a10dbeb8501b7fc60",
             "file": "src/app/features/dashboard/components/remediation-card/remediation-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2579,7 +2579,7 @@
                     "defaultValue": "'Lorem Ipsum Dolor Sit Amet Consectetur.'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 14,
                     "type": "string",
                     "decorators": []
                 },
@@ -2588,7 +2588,7 @@
                     "defaultValue": "'Lorem Ipsum Dolor Sit Amet Consectetur. Nunc Vitae Tortor Convallis Vitae Arcu. Magna.'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 15,
                     "type": "string",
                     "decorators": []
                 },
@@ -2597,7 +2597,7 @@
                     "defaultValue": "'Server'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 13,
                     "type": "string",
                     "decorators": []
                 },
@@ -2606,7 +2606,7 @@
                     "defaultValue": "'Server'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 12,
                     "type": "string",
                     "decorators": []
                 }
@@ -2617,7 +2617,7 @@
                     "defaultValue": "new EventEmitter<void>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 16,
+                    "line": 17,
                     "type": "EventEmitter"
                 }
             ],
@@ -2631,7 +2631,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 18
+                    "line": 19
                 }
             ],
             "methodsClass": [
@@ -2641,7 +2641,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -2660,12 +2660,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'app-remediation-card',\n  templateUrl: './remediation-card.component.html',\n  standalone: true,\n  imports: [CommonModule],\n})\nexport class RemediationCardComponent {\n  @Input() title: string = 'Server';\n  @Input() header: string = 'Server';\n  @Input() defaultText: string = 'Lorem Ipsum Dolor Sit Amet Consectetur.';\n  @Input() expandableText: string =\n    'Lorem Ipsum Dolor Sit Amet Consectetur. Nunc Vitae Tortor Convallis Vitae Arcu. Magna.';\n  @Output() cardClicked = new EventEmitter<void>();\n\n  isOpen = false;\n\n  toggle() {\n    this.isOpen = !this.isOpen;\n    this.cardClicked.emit();\n  }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'app-remediation-card',\n  templateUrl: './remediation-card.component.html',\n  styleUrl: './remediation-card.component.scss',\n  standalone: true,\n  imports: [CommonModule],\n})\nexport class RemediationCardComponent {\n  @Input() title: string = 'Server';\n  @Input() header: string = 'Server';\n  @Input() defaultText: string = 'Lorem Ipsum Dolor Sit Amet Consectetur.';\n  @Input() expandableText: string =\n    'Lorem Ipsum Dolor Sit Amet Consectetur. Nunc Vitae Tortor Convallis Vitae Arcu. Magna.';\n  @Output() cardClicked = new EventEmitter<void>();\n\n  isOpen = false;\n\n  toggle() {\n    this.isOpen = !this.isOpen;\n    this.cardClicked.emit();\n  }\n}",
+            "styleUrl": "./remediation-card.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div\n  class=\"bg-white p-4 max-w-sm sm:max-w-full cursor-pointer mt-5 border border-[#F0F1F3] rounded-[15px]\"\n  (click)=\"toggle()\"\n>\n  <div>\n    <h3 class=\"text-sm font-font-bold text-[#030229] mb-3\">{{ header }}</h3>\n  </div>\n  <div class=\"flex items-center bg-[#FAFAFA] p-3\">\n    <div class=\"bg-blue-100 rounded-full p-3 mr-4\">\n      <svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        class=\"h-6 w-6 text-blue-500\"\n        fill=\"none\"\n        viewBox=\"0 0 24 24\"\n        stroke=\"currentColor\"\n      >\n        <path\n          stroke-linecap=\"round\"\n          stroke-linejoin=\"round\"\n          stroke-width=\"2\"\n          d=\"M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01\"\n        />\n      </svg>\n    </div>\n    <div class=\"flex-grow\">\n      <h2 class=\"font-semibold text-[#404A60] text-xs\">{{ title }}</h2>\n      <p class=\"text-[9.45px] text-[#667085] font-medium\">{{ title }}</p>\n    </div>\n    <div class=\"border-l border-gray-200 pl-2 ml-2 lg:pl-4 lg:ml-4 max-w-sm\">\n      <p class=\"text-[#404A60] text-sm font-normal text-balance\">{{ defaultText }}</p>\n    </div>\n  </div>\n\n  <!-- The expandable content section remains the same -->\n  <div class=\"expandable-content\" [class.open]=\"isOpen\">\n    <div class=\"pt-4 text-[#525D73] text-base font-normal\">\n      <p>{{ expandableText }}</p>\n    </div>\n  </div>\n</div>\n"
+            "templateData": "<div\n  class=\"bg-white p-4 max-w-sm sm:max-w-full cursor-pointer mt-5 border border-[#F0F1F3] rounded-[15px]\"\n  (click)=\"toggle()\"\n>\n  <div>\n    <h3 class=\"text-sm font-font-bold text-[#030229] mb-3\">{{ header }}</h3>\n  </div>\n  <div class=\"flex items-center bg-[#FAFAFA] p-3\">\n    <div class=\"bg-blue-100 rounded-full p-3 mr-4\">\n      <svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        class=\"h-6 w-6 text-blue-500\"\n        fill=\"none\"\n        viewBox=\"0 0 24 24\"\n        stroke=\"currentColor\"\n      >\n        <path\n          stroke-linecap=\"round\"\n          stroke-linejoin=\"round\"\n          stroke-width=\"2\"\n          d=\"M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01\"\n        />\n      </svg>\n    </div>\n    <div class=\"flex-grow\">\n      <h2 class=\"font-semibold text-[#404A60] text-xs\">{{ title }}</h2>\n      <p class=\"text-[9.45px] text-[#667085] font-medium\">{{ title }}</p>\n    </div>\n    <div class=\"border-l border-gray-200 pl-2 ml-2 lg:pl-4 lg:ml-4 max-w-sm\">\n      <p class=\"text-[#404A60] text-sm font-normal text-balance\">{{ defaultText }}</p>\n    </div>\n  </div>\n\n  <!-- The expandable content section remains the same -->\n  <div class=\"expandable-content\" [class.open]=\"isOpen\">\n    <div class=\"pt-4 text-[#525D73] text-base font-normal\">\n      <p>{{ expandableText }}</p>\n    </div>\n  </div>\n</div>"
         },
         {
             "name": "SidenavComponent",
@@ -2945,7 +2946,7 @@
         },
         {
             "name": "VulnerabilitiesCardComponent",
-            "id": "component-VulnerabilitiesCardComponent-cc5f5584c94ba4524d78ff44cbd6a36cc69125c33ba72d0b1441afee541ab41f8a7e63a4fe72a87fd669d7c222ce865975f2afb34bed337fbff8fd0b03795402",
+            "id": "component-VulnerabilitiesCardComponent-49441ec2c4109669ed7196778c095dbdf22498730ff8ecb683694dd4631499176e0a4ff55f82d5b40d523adb3c1abab92e9ef39ce37d04125c3cde83dd887439",
             "file": "src/app/features/dashboard/components/vulnerabilities-card/vulnerabilities-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2968,7 +2969,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe version number that contains the fix.\n",
                     "description": "<p>The version number that contains the fix.</p>\n",
-                    "line": 37,
+                    "line": 36,
                     "type": "string",
                     "decorators": []
                 },
@@ -2979,7 +2980,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe label for the patched version information.\n",
                     "description": "<p>The label for the patched version information.</p>\n",
-                    "line": 32,
+                    "line": 31,
                     "type": "string",
                     "decorators": []
                 },
@@ -2990,7 +2991,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nThe main title for the vulnerability section.\n",
                     "description": "<p>The main title for the vulnerability section.</p>\n",
-                    "line": 15,
+                    "line": 14,
                     "type": "string",
                     "decorators": []
                 },
@@ -3001,7 +3002,7 @@
                     "deprecationMessage": "",
                     "rawdescription": "\n\nAn array of strings representing the vulnerable versions.\n",
                     "description": "<p>An array of strings representing the vulnerable versions.</p>\n",
-                    "line": 20,
+                    "line": 19,
                     "type": "string[]",
                     "decorators": []
                 }
@@ -3023,7 +3024,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-vulnerabilities-card',\n  templateUrl: './vulnerabilities-card.component.html',\n    standalone: true,\n  imports: [CommonModule],\n\n})\nexport class VulnerabilitiesCardComponent {\n  /**\n   * The main title for the vulnerability section.\n   */\n  @Input() title: string = 'Lorem Ipsum Dolor Sit';\n\n  /**\n   * An array of strings representing the vulnerable versions.\n   */\n  @Input() vulnerableVersions: string[] = [\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n  ];\n\n  /**\n   * The label for the patched version information.\n   */\n  @Input() patchedVersionLabel: string = 'Lorem';\n\n  /**\n   * The version number that contains the fix.\n   */\n  @Input() patchedVersion: string = '1.2.3.4';\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-vulnerabilities-card',\n  templateUrl: './vulnerabilities-card.component.html',\n  standalone: true,\n  imports: [CommonModule],\n})\nexport class VulnerabilitiesCardComponent {\n  /**\n   * The main title for the vulnerability section.\n   */\n  @Input() title: string = 'Lorem Ipsum Dolor Sit';\n\n  /**\n   * An array of strings representing the vulnerable versions.\n   */\n  @Input() vulnerableVersions: string[] = [\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n    '1.2.3.4',\n  ];\n\n  /**\n   * The label for the patched version information.\n   */\n  @Input() patchedVersionLabel: string = 'Lorem';\n\n  /**\n   * The version number that contains the fix.\n   */\n  @Input() patchedVersion: string = '1.2.3.4';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",

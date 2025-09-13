@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-frameone-card',
   imports: [CommonModule],
-  templateUrl: './frameone-card.component.html'
+  templateUrl: './frameone-card.component.html',
 })
 export class FrameoneCardComponent {
   /**

@@ -32,6 +32,7 @@
               }
             ],
             "styles": [
+              "src/tailwind.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -109,8 +110,8 @@
           "builder": "@storybook/angular:start-storybook",
           "options": {
             "configDir": ".storybook",
-            "browserTarget": "spiker:build",
-          
+            "browserTarget": "spiker:build:development",
+        
             "compodoc": true,
             "compodocArgs": [
               "-e",
@@ -118,7 +119,11 @@
               "-d",
               "."
             ],
-            "port": 6006
+            "port": 6006,
+            "styles": [
+              "src/tailwind.css",
+              "src/styles.scss"
+            ]
           }
         },
         "build-storybook": {
@@ -126,9 +131,7 @@
           "options": {
             "configDir": ".storybook",
             "browserTarget": "spiker:build",
-            "styles": [
-              "src/styles.scss"
-            ],
+         
             "compodoc": true,
             "compodocArgs": [
               "-e",
@@ -136,7 +139,11 @@
               "-d",
               "."
             ],
-            "outputDir": "storybook-static"
+            "outputDir": "storybook-static",
+            "styles": [
+              "src/tailwind.css",
+              "src/styles.scss"
+            ]
           }
         }
       }

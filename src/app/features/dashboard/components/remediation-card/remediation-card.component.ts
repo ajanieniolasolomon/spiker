@@ -4,6 +4,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-remediation-card',
   templateUrl: './remediation-card.component.html',
+  styleUrl: './remediation-card.component.scss',
   standalone: true,
   imports: [CommonModule],
 })

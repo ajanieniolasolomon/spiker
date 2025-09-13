@@ -8,10 +8,7 @@ const config: StorybookConfig = {
     "@storybook/addon-docs",
     "@storybook/addon-styling-webpack"
   ],
-  framework: {
-    name: "@storybook/angular",
-    options: {}
-  },
+  framework: '@storybook/angular', // 👈 Add this
   staticDirs: ['../public'],
 };
 
