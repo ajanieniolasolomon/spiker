@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { RemediationCardComponent } from '../../projects/spiker-lib/src/lib/remediation-card/remediation-card.component';
 
-
 const meta: Meta<RemediationCardComponent> = {
   title: 'Components/RemediationCard',
   component: RemediationCardComponent,

@@ -1,6 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
-import { NoteComponent, ListComponent, RemediationCardComponent, StatusComponent, ImageHoverComponent, ContextRiskCardComponent, ContextAnalyticCardComponent } from 'spiker-lib';
+import {
+  NoteComponent,
+  ListComponent,
+  RemediationCardComponent,
+  StatusComponent,
+  ImageHoverComponent,
+  ContextRiskCardComponent,
+  ContextAnalyticCardComponent,
+} from 'spiker-lib';
 import { ZoomService } from '../../../../core/services/zoom.service';
 import { DashboardDataService } from '../../services/dashboard-data.service';
 

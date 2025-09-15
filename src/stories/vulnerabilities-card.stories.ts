@@ -2,7 +2,6 @@ import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { VulnerabilitiesCardComponent } from '../../projects/spiker-lib/src/lib/vulnerabilities-card/vulnerabilities-card.component';
 
-
 export default {
   title: 'Components/Vulnerabilities Info',
   component: VulnerabilitiesCardComponent,

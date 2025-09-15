@@ -2,7 +2,6 @@ import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { StatusComponent } from '../../projects/spiker-lib/src/public-api';
 
-
 export default {
   title: 'Components/Status',
   component: StatusComponent,
