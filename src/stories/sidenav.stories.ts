@@ -1,6 +1,7 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { SidenavComponent } from '../app/layout/components/sidenav/sidenav.component';
+import { SidenavComponent } from '../../projects/spiker-lib/src/lib/sidenav/sidenav.component';
+
 
 export default {
   title: 'Layout/Sidenav',

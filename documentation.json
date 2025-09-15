@@ -1368,7 +1368,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-1a5aaeee5ac0858fde230d3200efab24edb82dc0acb802777579268c3a00cfc876952860cbce1000b8d843a366f9b683289e7118f17a340ed44bc87381490df3",
+            "id": "component-AppComponent-02de6aad87626e0af3a11730341d284752e7df4a78a62a86c9d2a8006e40e81db865da19ae2b83f0866b5f9dfade214525b134d07db14b2c4c169316709f569b",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1497,7 +1497,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, inject } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\nimport { SidenavComponent } from './layout/components/sidenav/sidenav.component';\nimport { NavigationService } from './core/services/navigation.service';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [CommonModule, RouterOutlet, SidenavComponent],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.scss',\n})\nexport class AppComponent {\n  private readonly _navigationService = inject(NavigationService);\n\n  public readonly navigationState = this._navigationService.navigationState;\n\n  public onToggleSidenav(): void {\n    this._navigationService.toggleSidenav();\n  }\n\n  public onNavItemClicked(itemId: string): void {\n    this._navigationService.handleNavItemClick(itemId);\n  }\n\n  public onLogoutClicked(): void {\n    this._navigationService.handleLogout();\n  }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, inject } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\nimport { SidenavComponent } from 'spiker-lib';\nimport { NavigationService } from './core/services/navigation.service';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [CommonModule, RouterOutlet, SidenavComponent],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.scss',\n})\nexport class AppComponent {\n  private readonly _navigationService = inject(NavigationService);\n\n  public readonly navigationState = this._navigationService.navigationState;\n\n  public onToggleSidenav(): void {\n    this._navigationService.toggleSidenav();\n  }\n\n  public onNavItemClicked(itemId: string): void {\n    this._navigationService.handleNavItemClick(itemId);\n  }\n\n  public onLogoutClicked(): void {\n    this._navigationService.handleLogout();\n  }\n}\n",
             "styleUrl": "./app.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -1804,7 +1804,7 @@
         },
         {
             "name": "DashboardComponent",
-            "id": "component-DashboardComponent-6d93492e4d5097bfedfab115d9fce7ab984eeef07cfd071cf60370d11e724e43b37d92a64e447ea7584b2a264da0b7a5820331af9479eb705c170833bba30691",
+            "id": "component-DashboardComponent-2dcb53bf588388971ad5f483db324f615b3339a858025d95ccf25777bb550dfa1d6415f1ec2708deb514476557dd90e10ff6b4641ffcb453973f631a7368f198",
             "file": "src/app/features/dashboard/components/dashboard/dashboard.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1831,7 +1831,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 31,
+                    "line": 25,
                     "modifierKind": [
                         123,
                         148
@@ -1846,7 +1846,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 30,
+                    "line": 24,
                     "modifierKind": [
                         123,
                         148
@@ -1861,7 +1861,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 34,
+                    "line": 28,
                     "modifierKind": [
                         125,
                         148
@@ -1876,7 +1876,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 36,
+                    "line": 30,
                     "modifierKind": [
                         125,
                         148
@@ -1891,7 +1891,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 33,
+                    "line": 27,
                     "modifierKind": [
                         125,
                         148
@@ -1905,7 +1905,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 48,
+                    "line": 42,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -1918,7 +1918,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 40,
+                    "line": 34,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -1931,7 +1931,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 44,
+                    "line": 38,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -1981,7 +1981,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, computed, inject } from '@angular/core';\nimport { NoteComponent } from '../../../../shared/components/note/note.component';\nimport { ListComponent } from '../../../../shared/components/list/list.component';\nimport { RemediationCardComponent } from '../remediation-card/remediation-card.component';\nimport { StatusComponent } from '../../../../shared/components/status/status.component';\nimport { ImageHoverComponent } from '../../../../shared/components/image-hover/image-hover.component';\nimport { ContextRiskCardComponent } from '../context-risk-card/context-risk-card.component';\nimport { ContextAnalyticCardComponent } from '../context-analytic-card/context-analytic-card.component';\nimport { ZoomService } from '../../../../core/services/zoom.service';\nimport { DashboardDataService } from '../../services/dashboard-data.service';\n\n@Component({\n  selector: 'app-dashboard',\n  standalone: true,\n  imports: [\n    CommonModule,\n    NoteComponent,\n    ListComponent,\n    RemediationCardComponent,\n    StatusComponent,\n    ImageHoverComponent,\n    ContextRiskCardComponent,\n    ContextAnalyticCardComponent,\n  ],\n  templateUrl: './dashboard.component.html',\n  styleUrl: './dashboard.component.scss',\n})\nexport class DashboardComponent {\n  private readonly _zoomService = inject(ZoomService);\n  private readonly _dashboardDataService = inject(DashboardDataService);\n\n  public readonly zoomLevel = this._zoomService.zoomLevel;\n  public readonly dashboardData = this._dashboardDataService.dashboardData;\n\n  public readonly transformStyle = computed(() => {\n    return `scale(${this.zoomLevel()})`;\n  });\n\n  public zoomIn(): void {\n    this._zoomService.zoomIn();\n  }\n\n  public zoomOut(): void {\n    this._zoomService.zoomOut();\n  }\n\n  public resetZoom(): void {\n    this._zoomService.resetZoom();\n  }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, computed, inject } from '@angular/core';\nimport { NoteComponent, ListComponent, RemediationCardComponent, StatusComponent, ImageHoverComponent, ContextRiskCardComponent, ContextAnalyticCardComponent } from 'spiker-lib';\nimport { ZoomService } from '../../../../core/services/zoom.service';\nimport { DashboardDataService } from '../../services/dashboard-data.service';\n\n@Component({\n  selector: 'app-dashboard',\n  standalone: true,\n  imports: [\n    CommonModule,\n    NoteComponent,\n    ListComponent,\n    RemediationCardComponent,\n    StatusComponent,\n    ImageHoverComponent,\n    ContextRiskCardComponent,\n    ContextAnalyticCardComponent,\n  ],\n  templateUrl: './dashboard.component.html',\n  styleUrl: './dashboard.component.scss',\n})\nexport class DashboardComponent {\n  private readonly _zoomService = inject(ZoomService);\n  private readonly _dashboardDataService = inject(DashboardDataService);\n\n  public readonly zoomLevel = this._zoomService.zoomLevel;\n  public readonly dashboardData = this._dashboardDataService.dashboardData;\n\n  public readonly transformStyle = computed(() => {\n    return `scale(${this.zoomLevel()})`;\n  });\n\n  public zoomIn(): void {\n    this._zoomService.zoomIn();\n  }\n\n  public zoomOut(): void {\n    this._zoomService.zoomOut();\n  }\n\n  public resetZoom(): void {\n    this._zoomService.resetZoom();\n  }\n}\n",
             "styleUrl": "./dashboard.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -2558,7 +2558,7 @@
         },
         {
             "name": "RemediationCardComponent",
-            "id": "component-RemediationCardComponent-1ebee645d90f45c4973e995c58e9c87c9a9351723dd55008691679a19c9ef46dce60df1ad934201422066f7fa5f0d58612be5f5992ca5b7a10dbeb8501b7fc60",
+            "id": "component-RemediationCardComponent-89e71edb868be553407ac02376916d4710c571e9ea410286b614eb117ccb3c77f880a9e47716f8599fe1b9bf2c25bf27333f541f4376f46a1e54841cc2f34ab9",
             "file": "src/app/features/dashboard/components/remediation-card/remediation-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2660,13 +2660,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'app-remediation-card',\n  templateUrl: './remediation-card.component.html',\n  styleUrl: './remediation-card.component.scss',\n  standalone: true,\n  imports: [CommonModule],\n})\nexport class RemediationCardComponent {\n  @Input() title: string = 'Server';\n  @Input() header: string = 'Server';\n  @Input() defaultText: string = 'Lorem Ipsum Dolor Sit Amet Consectetur.';\n  @Input() expandableText: string =\n    'Lorem Ipsum Dolor Sit Amet Consectetur. Nunc Vitae Tortor Convallis Vitae Arcu. Magna.';\n  @Output() cardClicked = new EventEmitter<void>();\n\n  isOpen = false;\n\n  toggle() {\n    this.isOpen = !this.isOpen;\n    this.cardClicked.emit();\n  }\n}",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'app-remediation-card',\n  templateUrl: './remediation-card.component.html',\n  styleUrl: './remediation-card.component.scss',\n  standalone: true,\n  imports: [CommonModule],\n})\nexport class RemediationCardComponent {\n  @Input() title: string = 'Server';\n  @Input() header: string = 'Server';\n  @Input() defaultText: string = 'Lorem Ipsum Dolor Sit Amet Consectetur.';\n  @Input() expandableText: string =\n    'Lorem Ipsum Dolor Sit Amet Consectetur. Nunc Vitae Tortor Convallis Vitae Arcu. Magna.';\n  @Output() cardClicked = new EventEmitter<void>();\n\n  isOpen = false;\n\n  toggle() {\n    this.isOpen = !this.isOpen;\n    this.cardClicked.emit();\n  }\n}\n",
             "styleUrl": "./remediation-card.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<div\n  class=\"bg-white p-4 max-w-sm sm:max-w-full cursor-pointer mt-5 border border-[#F0F1F3] rounded-[15px]\"\n  (click)=\"toggle()\"\n>\n  <div>\n    <h3 class=\"text-sm font-font-bold text-[#030229] mb-3\">{{ header }}</h3>\n  </div>\n  <div class=\"flex items-center bg-[#FAFAFA] p-3\">\n    <div class=\"bg-blue-100 rounded-full p-3 mr-4\">\n      <svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        class=\"h-6 w-6 text-blue-500\"\n        fill=\"none\"\n        viewBox=\"0 0 24 24\"\n        stroke=\"currentColor\"\n      >\n        <path\n          stroke-linecap=\"round\"\n          stroke-linejoin=\"round\"\n          stroke-width=\"2\"\n          d=\"M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01\"\n        />\n      </svg>\n    </div>\n    <div class=\"flex-grow\">\n      <h2 class=\"font-semibold text-[#404A60] text-xs\">{{ title }}</h2>\n      <p class=\"text-[9.45px] text-[#667085] font-medium\">{{ title }}</p>\n    </div>\n    <div class=\"border-l border-gray-200 pl-2 ml-2 lg:pl-4 lg:ml-4 max-w-sm\">\n      <p class=\"text-[#404A60] text-sm font-normal text-balance\">{{ defaultText }}</p>\n    </div>\n  </div>\n\n  <!-- The expandable content section remains the same -->\n  <div class=\"expandable-content\" [class.open]=\"isOpen\">\n    <div class=\"pt-4 text-[#525D73] text-base font-normal\">\n      <p>{{ expandableText }}</p>\n    </div>\n  </div>\n</div>"
+            "templateData": "<div\n  class=\"bg-white p-4 max-w-sm sm:max-w-full cursor-pointer mt-5 border border-[#F0F1F3] rounded-[15px]\"\n  (click)=\"toggle()\"\n>\n  <div>\n    <h3 class=\"text-sm font-font-bold text-[#030229] mb-3\">{{ header }}</h3>\n  </div>\n  <div class=\"flex items-center bg-[#FAFAFA] p-3\">\n    <div class=\"bg-blue-100 rounded-full p-3 mr-4\">\n      <svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        class=\"h-6 w-6 text-blue-500\"\n        fill=\"none\"\n        viewBox=\"0 0 24 24\"\n        stroke=\"currentColor\"\n      >\n        <path\n          stroke-linecap=\"round\"\n          stroke-linejoin=\"round\"\n          stroke-width=\"2\"\n          d=\"M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01\"\n        />\n      </svg>\n    </div>\n    <div class=\"flex-grow\">\n      <h2 class=\"font-semibold text-[#404A60] text-xs\">{{ title }}</h2>\n      <p class=\"text-[9.45px] text-[#667085] font-medium\">{{ title }}</p>\n    </div>\n    <div class=\"border-l border-gray-200 pl-2 ml-2 lg:pl-4 lg:ml-4 max-w-sm\">\n      <p class=\"text-[#404A60] text-sm font-normal text-balance\">{{ defaultText }}</p>\n    </div>\n  </div>\n\n  <!-- The expandable content section remains the same -->\n  <div class=\"expandable-content\" [class.open]=\"isOpen\">\n    <div class=\"pt-4 text-[#525D73] text-base font-normal\">\n      <p>{{ expandableText }}</p>\n    </div>\n  </div>\n</div>\n"
         },
         {
             "name": "SidenavComponent",
@@ -2846,105 +2846,6 @@
             "templateData": "<div\n  *ngIf=\"isExpanded\"\n  (click)=\"toggleSidenav()\"\n  class=\"fixed inset-0 bg-black/50 z-40 lg:hidden\"\n></div>\n\n<aside\n  class=\"fixed top-0 left-0 h-screen bg-white shadow-lg flex flex-col transition-all duration-300 ease-in-out z-50 lg:relative lg:transition-all\"\n  [ngClass]=\"{\n    'w-64': isExpanded,\n    '-translate-x-full': !isExpanded,\n    'translate-x-0': isExpanded,\n    'lg:w-20': !isExpanded,\n    'lg:translate-x-0': true,\n  }\"\n  (mouseenter)=\"isHovering = true\"\n  (mouseleave)=\"isHovering = false\"\n>\n  <!-- Logo Section -->\n  <div *ngIf=\"!isExpanded\" class=\"flex items-center justify-center h-20 px-4 flex-shrink-0\">\n    <img src=\"logo.PNG\" alt=\"\" class=\"w-8 h-8\" />\n  </div>\n\n  <!-- Top Navigation -->\n  <nav class=\"flex-grow px-4 space-y-2 mt-[20px] sm:mt-[30px]\">\n    <a\n      *ngFor=\"let item of topNavItems\"\n      (click)=\"handleItemClick(item.id)\"\n      class=\"flex items-center p-2 rounded-lg cursor-pointer transition-colors duration-200\"\n      [ngClass]=\"\n        activeItemId === item.id ? 'bg-green-100 text-green-800' : 'text-gray-600 hover:bg-gray-100'\n      \"\n    >\n      <img [src]=\"item.iconSvgPath\" alt=\"\" class=\"w-5 h-5\" />\n      <span\n        class=\"ml-3 text-[#525D73] text-sm transition-opacity duration-200\"\n        [ngClass]=\"isExpanded ? 'opacity-100' : 'opacity-0'\"\n      >\n        {{ item.label }}\n      </span>\n    </a>\n  </nav>\n\n  <!-- Bottom Navigation -->\n  <div class=\"flex-shrink-0 px-4 space-y-2\">\n    <a\n      *ngFor=\"let item of bottomNavItems\"\n      (click)=\"handleItemClick(item.id)\"\n      class=\"flex items-center p-2 rounded-lg cursor-pointer transition-colors duration-200\"\n      [ngClass]=\"\n        activeItemId === item.id ? 'bg-green-50 text-[#525D73]' : 'text-[#525D73] hover:bg-gray-100'\n      \"\n    >\n      <img [src]=\"item.iconSvgPath\" alt=\"\" class=\"w-5 h-5\" />\n      <span\n        class=\"ml-3 text-[#525D73] text-sm transition-opacity duration-200\"\n        [ngClass]=\"isExpanded ? 'opacity-100' : 'opacity-0'\"\n      >\n        {{ item.label }}\n      </span>\n    </a>\n  </div>\n\n  <!-- User Profile Section -->\n  <div class=\"flex-shrink-0 p-4 border-t border-gray-200 mt-2\">\n    <div class=\"flex items-center\">\n      <img src=\"sidenav/avatar.svg\" alt=\"\" class=\"w-10 h-10\" />\n      <div *ngIf=\"isExpanded\" class=\"ml-3 flex-grow overflow-hidden\">\n        <p class=\"font-semibold text-[#525D73] truncate\">{{ userName }}</p>\n        <p class=\"text-sm text-[#525D73] truncate\">{{ userRole }}</p>\n      </div>\n      <div\n        *ngIf=\"isExpanded\"\n        (click)=\"logoutClicked.emit()\"\n        class=\"ml-2 cursor-pointer text-gray-500 hover:text-gray-800 flex-shrink-0\"\n      >\n        <svg\n          class=\"h-6 w-6\"\n          xmlns=\"http://www.w3.org/2000/svg\"\n          fill=\"none\"\n          viewBox=\"0 0 24 24\"\n          stroke-width=\"1.5\"\n          stroke=\"currentColor\"\n        >\n          <path\n            stroke-linecap=\"round\"\n            stroke-linejoin=\"round\"\n            d=\"M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75\"\n          />\n        </svg>\n      </div>\n    </div>\n  </div>\n\n  <!-- Collapse/Expand Button (Only visible on desktop) -->\n  <button\n    *ngIf=\"isExpanded || isHovering\"\n    (click)=\"toggleSidenav()\"\n    class=\"absolute -right-3 top-10 bg-green-600 hover:bg-green-700 text-white w-6 h-6 rounded-full hidden lg:flex items-center justify-center transition-opacity duration-200 z-50\"\n  >\n    <svg\n      class=\"h-4 w-4 transition-transform duration-300\"\n      [ngClass]=\"{ 'rotate-180': !isExpanded }\"\n      xmlns=\"http://www.w3.org/2000/svg\"\n      fill=\"none\"\n      viewBox=\"0 0 24 24\"\n      stroke-width=\"2\"\n      stroke=\"currentColor\"\n    >\n      <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M15.75 19.5L8.25 12l7.5-7.5\" />\n    </svg>\n  </button>\n</aside>\n"
         },
         {
-            "name": "StatusComponent",
-            "id": "component-StatusComponent-1c3fdf3025c33f27e399c0455934c43db19ceb3fff28babe560e79d285c6bca952e002d92d7e85463cb9a3a783d9be5dcbe1cace6077212ec05349e07c83a0ce",
-            "file": "src/app/shared/components/status/status.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-status",
-            "styleUrls": [],
-            "styles": [],
-            "templateUrl": [
-                "./status.component.html"
-            ],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "status",
-                    "defaultValue": "'success'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nThe type of status, which determines the color and icon.\n",
-                    "description": "<p>The type of status, which determines the color and icon.</p>\n",
-                    "line": 27,
-                    "type": "StatusType",
-                    "decorators": []
-                },
-                {
-                    "name": "subtitle",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nOptional smaller text that appears below the title.\n",
-                    "description": "<p>Optional smaller text that appears below the title.</p>\n",
-                    "line": 22,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "title",
-                    "defaultValue": "'Lorem'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nThe primary text label for the status.\n",
-                    "description": "<p>The primary text label for the status.</p>\n",
-                    "line": 17,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "statusClasses",
-                    "defaultValue": "{\n    error: {\n      iconBg: 'bg-[#D9534F]',\n      text: 'text-[#D9534F]',\n    },\n    warning: {\n      iconBg: 'bg-[#F0AD4E]',\n      text: 'text-[#F0AD4E]',\n    },\n    success: {\n      iconBg: 'bg-[#5CB85C]',\n      text: 'text-[#5CB85C]',\n    },\n  }",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "indexKey": "",
-                    "optional": false,
-                    "description": "<p>A map to easily resolve the correct Tailwind CSS classes for each status.\nThe hex codes are chosen to perfectly match the colors in the image.</p>\n",
-                    "line": 33,
-                    "rawdescription": "\n\nA map to easily resolve the correct Tailwind CSS classes for each status.\nThe hex codes are chosen to perfectly match the colors in the image.\n"
-                }
-            ],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "CommonModule",
-                    "type": "module"
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n// Define a type for the status to ensure type safety and provide clear options\nexport type StatusType = 'error' | 'warning' | 'success';\n\n@Component({\n  selector: 'app-status',\n  standalone: true,\n  imports: [CommonModule], // Required for *ngIf and ngClass\n  templateUrl: './status.component.html',\n})\nexport class StatusComponent {\n  /**\n   * The primary text label for the status.\n   */\n  @Input() title: string = 'Lorem';\n\n  /**\n   * Optional smaller text that appears below the title.\n   */\n  @Input() subtitle?: string;\n\n  /**\n   * The type of status, which determines the color and icon.\n   */\n  @Input() status: StatusType = 'success';\n\n  /**\n   * A map to easily resolve the correct Tailwind CSS classes for each status.\n   * The hex codes are chosen to perfectly match the colors in the image.\n   */\n  statusClasses = {\n    error: {\n      iconBg: 'bg-[#D9534F]',\n      text: 'text-[#D9534F]',\n    },\n    warning: {\n      iconBg: 'bg-[#F0AD4E]',\n      text: 'text-[#F0AD4E]',\n    },\n    success: {\n      iconBg: 'bg-[#5CB85C]',\n      text: 'text-[#5CB85C]',\n    },\n  };\n\n  get currentStatusClasses() {\n    return this.statusClasses[this.status];\n  }\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "extends": [],
-            "accessors": {
-                "currentStatusClasses": {
-                    "name": "currentStatusClasses",
-                    "getSignature": {
-                        "name": "currentStatusClasses",
-                        "type": "",
-                        "returnType": "",
-                        "line": 48
-                    }
-                }
-            },
-            "templateData": "<!-- Main container using flexbox for alignment -->\n<div class=\"flex items-center space-x-2\">\n  <!-- Circular Icon Container -->\n  <div\n    class=\"w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0\"\n    [ngClass]=\"currentStatusClasses.iconBg\"\n  >\n    <!-- The icon changes based on the status type -->\n    <ng-container [ngSwitch]=\"status\">\n      <!-- Success Icon (Shield with Check) -->\n      <img *ngSwitchCase=\"'success'\" src=\"status/success.svg\" alt=\"frametwo\" class=\"h-5 w-5\" />\n      <img *ngSwitchCase=\"'error'\" src=\"status/error.svg\" alt=\"frametwo\" class=\"h-5 w-5\" />\n      <img *ngSwitchDefault src=\"status/warning.svg\" alt=\"frametwo\" class=\"h-5 w-5\" />\n    </ng-container>\n  </div>\n\n  <!-- Text Container for Title and optional Subtitle -->\n  <div>\n    <p class=\"text-sm font-medium\" [ngClass]=\"currentStatusClasses.text\">\n      {{ title }}\n    </p>\n    <p *ngIf=\"subtitle\" class=\"text-sm text-gray-500 mt-0.5\">\n      {{ subtitle }}\n    </p>\n  </div>\n</div>\n"
-        },
-        {
             "name": "VulnerabilitiesCardComponent",
             "id": "component-VulnerabilitiesCardComponent-49441ec2c4109669ed7196778c095dbdf22498730ff8ecb683694dd4631499176e0a4ff55f82d5b40d523adb3c1abab92e9ef39ce37d04125c3cde83dd887439",
             "file": "src/app/features/dashboard/components/vulnerabilities-card/vulnerabilities-card.component.ts",
@@ -3069,17 +2970,6 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 192
-            },
-            {
-                "name": "StatusType",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "\"error\" | \"warning\" | \"success\"",
-                "file": "src/app/shared/components/status/status.component.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 192
             }
         ],
         "enumerations": [],
@@ -3125,25 +3015,12 @@
                     "description": "",
                     "kind": 192
                 }
-            ],
-            "src/app/shared/components/status/status.component.ts": [
-                {
-                    "name": "StatusType",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "\"error\" | \"warning\" | \"success\"",
-                    "file": "src/app/shared/components/status/status.component.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 192
-                }
             ]
         }
     },
     "routes": [],
     "coverage": {
-        "count": 13,
+        "count": 12,
         "status": "low",
         "files": [
             {
@@ -3454,25 +3331,6 @@
                 "coveragePercent": 66,
                 "coverageCount": "2/3",
                 "status": "good"
-            },
-            {
-                "filePath": "src/app/shared/components/status/status.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "StatusComponent",
-                "coveragePercent": 80,
-                "coverageCount": "4/5",
-                "status": "very-good"
-            },
-            {
-                "filePath": "src/app/shared/components/status/status.component.ts",
-                "type": "type alias",
-                "linktype": "miscellaneous",
-                "linksubtype": "typealias",
-                "name": "StatusType",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
             },
             {
                 "filePath": "src/app/shared/models/asset-item.model.ts",

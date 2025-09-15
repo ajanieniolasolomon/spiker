@@ -1,7 +1,7 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { ContextAnalyticCardComponent } from '../app/features/dashboard/components/context-analytic-card/context-analytic-card.component';
-// import { ContextAnalyticCardComponent } from '../components/context-analytic-card/context-analytic-card.component';
+import { ContextAnalyticCardComponent } from '../../projects/spiker-lib/src/lib/context-analytic-card/context-analytic-card.component';
+
 
 export default {
   title: 'Components/ContextAnalyticCard',

@@ -1,6 +1,7 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { ListComponent, ListItem } from '../app/shared/components';
+import { ListComponent } from '../../projects/spiker-lib/src/lib/list/list.component';
+import type { ListItem } from '../../projects/spiker-lib/src/lib/list/list.component';
 
 export default {
   title: 'Components/List',

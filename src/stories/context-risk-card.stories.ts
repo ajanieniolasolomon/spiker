@@ -1,9 +1,7 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import {
-  AssetItem,
-  ContextRiskCardComponent,
-} from '../app/features/dashboard/components/context-risk-card/context-risk-card.component';
+import { ContextRiskCardComponent } from '../../projects/spiker-lib/src/lib/context-risk-card/context-risk-card.component';
+import type { AssetItem } from '../../projects/spiker-lib/src/lib/context-risk-card/context-risk-card.component';
 
 // import { action } from '@storybook/addon-actions';
 

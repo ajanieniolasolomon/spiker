@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SidenavComponent } from './layout/components/sidenav/sidenav.component';
+import { SidenavComponent } from 'spiker-lib';
 import { NavigationService } from './core/services/navigation.service';
 
 @Component({
