@@ -1,6 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { FrameoneCardComponent } from '../app/features/dashboard/components/frameone-card/frameone-card.component';
+import { FrameoneCardComponent } from '../../projects/spiker-lib/src/lib/frameone-card/frameone-card.component';
 
 export default {
   title: 'Components/FrameOneCard',

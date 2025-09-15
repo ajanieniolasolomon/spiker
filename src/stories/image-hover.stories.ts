@@ -1,9 +1,11 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { ImageHoverComponent } from '../app/shared/components';
-import { FrameoneCardComponent } from '../app/features/dashboard/components/frameone-card/frameone-card.component';
-import { FrametwoCardComponent } from '../app/features/dashboard/components/frametwo-card/frametwo-card.component';
-import { FramethreeCardComponent } from '../app/features/dashboard/components/framethree-card/framethree-card.component';
+import {
+  ImageHoverComponent,
+  FrameoneCardComponent,
+  FrametwoCardComponent,
+  FramethreeCardComponent,
+} from '../../projects/spiker-lib/src/public-api';
 
 export default {
   title: 'Components/ImageHover (Dynamic Component)',

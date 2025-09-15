@@ -1,6 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import { NoteComponent } from '../app/shared/components';
+import { NoteComponent } from '../../projects/spiker-lib/src/lib/note/note.component';
 
 export default {
   title: 'Components/Note',

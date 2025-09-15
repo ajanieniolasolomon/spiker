@@ -1,0 +1,14 @@
+<div class="bg-white p-4 rounded-[15px] shadow-[0_4px_12px_rgba(0,0,0,0.10)]">
+  <h3 class="text-lg font-semibold text-[#525D73]">{{ title }}</h3>
+  <div class="mt-4 flex flex-wrap gap-2">
+    <span *ngFor="let version of vulnerableVersions" class="bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded-md">
+      {{ version }}
+    </span>
+  </div>
+  <div class="mt-4 text-sm text-gray-700">
+    <span class="font-medium">{{ patchedVersionLabel }}</span>
+    <span class="bg-green-100 text-green-800 px-2 py-1 rounded-md ml-2">{{ patchedVersion }}</span>
+  </div>
+</div>
+
+

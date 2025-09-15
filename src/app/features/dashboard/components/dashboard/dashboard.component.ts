@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
-import { NoteComponent } from '../../../../shared/components/note/note.component';
-import { ListComponent } from '../../../../shared/components/list/list.component';
-import { RemediationCardComponent } from '../remediation-card/remediation-card.component';
-import { StatusComponent } from '../../../../shared/components/status/status.component';
-import { ImageHoverComponent } from '../../../../shared/components/image-hover/image-hover.component';
-import { ContextRiskCardComponent } from '../context-risk-card/context-risk-card.component';
-import { ContextAnalyticCardComponent } from '../context-analytic-card/context-analytic-card.component';
+import {
+  NoteComponent,
+  ListComponent,
+  RemediationCardComponent,
+  StatusComponent,
+  ImageHoverComponent,
+  ContextRiskCardComponent,
+  ContextAnalyticCardComponent,
+} from 'spiker-lib';
 import { ZoomService } from '../../../../core/services/zoom.service';
 import { DashboardDataService } from '../../services/dashboard-data.service';
 

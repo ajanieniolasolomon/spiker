@@ -1,9 +1,7 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
-import {
-  ContentBlock,
-  FramethreeCardComponent,
-} from '../app/features/dashboard/components/framethree-card/framethree-card.component';
+import { FramethreeCardComponent } from '../../projects/spiker-lib/src/lib/framethree-card/framethree-card.component';
+import type { ContentBlock } from '../../projects/spiker-lib/src/lib/framethree-card/framethree-card.component';
 
 export default {
   title: 'Components/FrameThreeCard',
